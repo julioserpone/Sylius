@@ -5,11 +5,8 @@
 /var/*
 !/var/.gitkeep
 
-/web/assets
-/web/bundles
-/web/css
-/web/js
-/web/media
+/web/*
+!/web/resources
 
 /bin/*
 !/bin/build-package
