@@ -1,0 +1,17 @@
+<div class="ui basic segment">
+    <div class="ui three column stackable grid">
+        <div class="column">
+            <a href="{{ path('sylius_shop_homepage') }}"><img src="{{ asset('resources/img/logo.png') }}" alt="Yezzstore Logo" class="ui image logo-shop" /></a>
+        </div>
+        <div class="column">
+            {{ sonata_block_render_event('sylius.shop.layout.header') }}
+        </div>
+        <div class="right aligned column">
+            {% if order.customer.id|default(null) is not null %}
+                <div class="item" id="purchaser-email">{{ 'sylius.ui.checking_out_as'|trans }} {{ order.customer.fullName|default(order.customer.email) }}.</div>
+            {% else %}
+                <a href="{{ path('sylius_shop_login') }}" class="item">{{ 'sylius.ui.sign_in'|trans }}</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
