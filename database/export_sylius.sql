@@ -36,13 +36,18 @@ CREATE TABLE IF NOT EXISTS `sylius_address` (
   PRIMARY KEY (`id`),
   KEY `IDX_B97FF0589395C3F3` (`customer_id`),
   CONSTRAINT `FK_B97FF0589395C3F3` FOREIGN KEY (`customer_id`) REFERENCES `sylius_customer` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_address: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_address: ~5 rows (aproximadamente)
 DELETE FROM `sylius_address`;
 /*!40000 ALTER TABLE `sylius_address` DISABLE KEYS */;
 INSERT INTO `sylius_address` (`id`, `customer_id`, `first_name`, `last_name`, `phone_number`, `street`, `company`, `city`, `postcode`, `created_at`, `updated_at`, `country_code`, `province_code`, `province_name`) VALUES
-	(3, 22, 'JULIO', 'HERNANDEZ', '847-320-5796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-17 18:18:50', '2018-01-17 18:18:51', 'US', NULL, 'Illinois');
+	(3, 22, 'JULIO', 'HERNANDEZ', '847-320-5796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-17 18:18:50', '2018-01-17 18:18:51', 'US', NULL, 'Illinois'),
+	(5, NULL, 'JULIO', 'HERNANDEZ', '847-320-5796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-17 18:18:50', '2018-01-17 18:18:51', 'US', NULL, 'Illinois'),
+	(6, NULL, 'JULIO', 'HERNANDEZ', '847-320-5796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-18 15:40:33', '2018-01-18 15:40:33', 'US', NULL, 'Illinois'),
+	(7, NULL, 'JULIO', 'HERNANDEZ', '847-320-5796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-17 18:18:50', '2018-01-17 18:18:51', 'US', NULL, 'Illinois'),
+	(8, NULL, 'JULIO', 'HERNANDEZ', '847-320-5796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-18 19:43:29', '2018-01-18 19:43:31', 'US', NULL, 'Illinois'),
+	(9, NULL, 'JULIO', 'HERNANDEZ', '847-320-5796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-17 18:18:50', '2018-01-17 18:18:51', 'US', NULL, 'Illinois');
 /*!40000 ALTER TABLE `sylius_address` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_address_log_entries
@@ -57,13 +62,20 @@ CREATE TABLE IF NOT EXISTS `sylius_address_log_entries` (
   `data` longtext COLLATE utf8_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
   `username` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_address_log_entries: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_address_log_entries: ~4 rows (aproximadamente)
 DELETE FROM `sylius_address_log_entries`;
 /*!40000 ALTER TABLE `sylius_address_log_entries` DISABLE KEYS */;
 INSERT INTO `sylius_address_log_entries` (`id`, `action`, `logged_at`, `object_id`, `object_class`, `version`, `data`, `username`) VALUES
-	(3, 'create', '2018-01-17 18:23:51', '3', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:12:"847-320-5796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com');
+	(3, 'create', '2018-01-17 18:23:51', '3', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:12:"847-320-5796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
+	(4, 'create', '2018-01-18 14:01:46', '4', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:12:"847-320-5796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
+	(5, 'remove', '2018-01-18 14:03:33', '4', 'Sylius\\Component\\Core\\Model\\Address', 2, 'N;', 'juliohernandezs@gmail.com'),
+	(6, 'create', '2018-01-18 15:28:21', '5', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:12:"847-320-5796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
+	(7, 'create', '2018-01-18 15:40:33', '6', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:12:"847-320-5796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
+	(8, 'create', '2018-01-18 19:02:00', '7', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:12:"847-320-5796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
+	(9, 'create', '2018-01-18 19:43:31', '8', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:12:"847-320-5796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
+	(10, 'create', '2018-01-19 19:18:59', '9', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:12:"847-320-5796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com');
 /*!40000 ALTER TABLE `sylius_address_log_entries` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_adjustment
@@ -88,11 +100,17 @@ CREATE TABLE IF NOT EXISTS `sylius_adjustment` (
   CONSTRAINT `FK_ACA6E0F28D9F6D38` FOREIGN KEY (`order_id`) REFERENCES `sylius_order` (`id`) ON DELETE CASCADE,
   CONSTRAINT `FK_ACA6E0F2E415FB15` FOREIGN KEY (`order_item_id`) REFERENCES `sylius_order_item` (`id`) ON DELETE CASCADE,
   CONSTRAINT `FK_ACA6E0F2F720C233` FOREIGN KEY (`order_item_unit_id`) REFERENCES `sylius_order_item_unit` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=227 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_adjustment: ~11 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_adjustment: ~5 rows (aproximadamente)
 DELETE FROM `sylius_adjustment`;
 /*!40000 ALTER TABLE `sylius_adjustment` DISABLE KEYS */;
+INSERT INTO `sylius_adjustment` (`id`, `order_id`, `order_item_id`, `order_item_unit_id`, `type`, `label`, `amount`, `is_neutral`, `is_locked`, `origin_code`, `created_at`, `updated_at`) VALUES
+	(222, NULL, NULL, 173, 'order_promotion', 'Promocion 4E4', -200, 0, 0, 'YEZZ4E4-PROMO', '2018-01-19 19:24:08', '2018-01-19 19:24:08'),
+	(223, NULL, NULL, 169, 'order_promotion', 'Promocion 4E4', -200, 0, 0, 'YEZZ4E4-PROMO', '2018-01-19 19:24:08', '2018-01-19 19:24:08'),
+	(224, NULL, NULL, 170, 'order_promotion', 'Promocion 4E4', -200, 0, 0, 'YEZZ4E4-PROMO', '2018-01-19 19:24:08', '2018-01-19 19:24:08'),
+	(225, NULL, NULL, 171, 'order_promotion', 'Promocion 4E4', -200, 0, 0, 'YEZZ4E4-PROMO', '2018-01-19 19:24:08', '2018-01-19 19:24:08'),
+	(226, NULL, NULL, 172, 'order_promotion', 'Promocion 4E4', -200, 0, 0, 'YEZZ4E4-PROMO', '2018-01-19 19:24:08', '2018-01-19 19:24:08');
 /*!40000 ALTER TABLE `sylius_adjustment` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_admin_api_access_token
@@ -210,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `sylius_admin_user` (
 DELETE FROM `sylius_admin_user`;
 /*!40000 ALTER TABLE `sylius_admin_user` DISABLE KEYS */;
 INSERT INTO `sylius_admin_user` (`id`, `username`, `username_canonical`, `enabled`, `salt`, `password`, `last_login`, `password_reset_token`, `password_requested_at`, `email_verification_token`, `verified_at`, `locked`, `expires_at`, `credentials_expire_at`, `roles`, `email`, `email_canonical`, `created_at`, `updated_at`, `first_name`, `last_name`, `locale_code`) VALUES
-	(1, 'admin', 'admin', 1, '8egeg9yhivc4080og0w84cgw0so0wow', 'c0QCgTZYOjD2RneHHYqlO0zOdaH97P0eL0FICjX4meSZSxrJXSm6zR2C376WJR3phrr1jxu1lsjsvbco1lJnIQ==', '2018-01-17 17:28:42', NULL, NULL, NULL, NULL, 0, NULL, NULL, 'a:1:{i:0;s:26:"ROLE_ADMINISTRATION_ACCESS";}', 'jhernandez@yezzcorp.com', 'jhernandez@yezzcorp.com', '2018-01-16 18:26:05', '2018-01-17 21:14:43', 'Julio', 'Hernandez', 'es_ES'),
+	(1, 'admin', 'admin', 1, '8egeg9yhivc4080og0w84cgw0so0wow', 'c0QCgTZYOjD2RneHHYqlO0zOdaH97P0eL0FICjX4meSZSxrJXSm6zR2C376WJR3phrr1jxu1lsjsvbco1lJnIQ==', '2018-01-18 21:13:56', NULL, NULL, NULL, NULL, 0, NULL, NULL, 'a:1:{i:0;s:26:"ROLE_ADMINISTRATION_ACCESS";}', 'jhernandez@yezzcorp.com', 'jhernandez@yezzcorp.com', '2018-01-16 18:26:05', '2018-01-18 21:13:56', 'Julio', 'Hernandez', 'es_ES'),
 	(2, 'api', 'api', 1, 'hizjo3bbi00kgogck88cgkc0gc048c0', 'Mp4kYSbRGavEnf/Zjqfy372PiQsECi7WYkZVshAcoFNeEqSzrDKQ2Knrp/jVMft41jHFQ/dJ1OmGg6/L59YO0g==', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'a:2:{i:0;s:26:"ROLE_ADMINISTRATION_ACCESS";i:1;s:15:"ROLE_API_ACCESS";}', 'api@example.com', 'api@example.com', '2018-01-16 18:26:05', '2018-01-16 18:26:05', 'Luke', 'Brushwood', 'en_US');
 /*!40000 ALTER TABLE `sylius_admin_user` ENABLE KEYS */;
 
@@ -284,7 +302,7 @@ CREATE TABLE IF NOT EXISTS `sylius_channel_locales` (
   CONSTRAINT `FK_786B7A84E559DFD1` FOREIGN KEY (`locale_id`) REFERENCES `sylius_locale` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_channel_locales: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_channel_locales: ~2 rows (aproximadamente)
 DELETE FROM `sylius_channel_locales`;
 /*!40000 ALTER TABLE `sylius_channel_locales` DISABLE KEYS */;
 INSERT INTO `sylius_channel_locales` (`channel_id`, `locale_id`) VALUES
@@ -304,11 +322,16 @@ CREATE TABLE IF NOT EXISTS `sylius_channel_pricing` (
   UNIQUE KEY `product_variant_channel_idx` (`product_variant_id`,`channel_code`),
   KEY `IDX_7801820CA80EF684` (`product_variant_id`),
   CONSTRAINT `FK_7801820CA80EF684` FOREIGN KEY (`product_variant_id`) REFERENCES `sylius_product_variant` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=331 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=337 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_channel_pricing: ~330 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_channel_pricing: ~4 rows (aproximadamente)
 DELETE FROM `sylius_channel_pricing`;
 /*!40000 ALTER TABLE `sylius_channel_pricing` DISABLE KEYS */;
+INSERT INTO `sylius_channel_pricing` (`id`, `product_variant_id`, `price`, `channel_code`, `original_price`) VALUES
+	(333, 333, 3900, 'US_WEB', 3000),
+	(334, 334, 3950, 'US_WEB', 3050),
+	(335, 335, 3800, 'US_WEB', 2900),
+	(336, 336, 3700, 'US_WEB', 2800);
 /*!40000 ALTER TABLE `sylius_channel_pricing` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_country
@@ -372,7 +395,7 @@ CREATE TABLE IF NOT EXISTS `sylius_customer` (
   CONSTRAINT `FK_7E82D5E6D2919A68` FOREIGN KEY (`customer_group_id`) REFERENCES `sylius_customer_group` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_customer: ~22 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_customer: ~2 rows (aproximadamente)
 DELETE FROM `sylius_customer`;
 /*!40000 ALTER TABLE `sylius_customer` DISABLE KEYS */;
 INSERT INTO `sylius_customer` (`id`, `customer_group_id`, `default_address_id`, `email`, `email_canonical`, `first_name`, `last_name`, `birthday`, `gender`, `created_at`, `updated_at`, `phone_number`, `subscribed_to_newsletter`) VALUES
@@ -450,7 +473,7 @@ CREATE TABLE IF NOT EXISTS `sylius_locale` (
   UNIQUE KEY `UNIQ_7BA1286477153098` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_locale: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_locale: ~2 rows (aproximadamente)
 DELETE FROM `sylius_locale`;
 /*!40000 ALTER TABLE `sylius_locale` DISABLE KEYS */;
 INSERT INTO `sylius_locale` (`id`, `code`, `created_at`, `updated_at`) VALUES
@@ -547,11 +570,15 @@ CREATE TABLE IF NOT EXISTS `sylius_order` (
   CONSTRAINT `FK_6196A1F972F5A1AA` FOREIGN KEY (`channel_id`) REFERENCES `sylius_channel` (`id`),
   CONSTRAINT `FK_6196A1F979D0C0E4` FOREIGN KEY (`billing_address_id`) REFERENCES `sylius_address` (`id`),
   CONSTRAINT `FK_6196A1F99395C3F3` FOREIGN KEY (`customer_id`) REFERENCES `sylius_customer` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_order: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_order: ~3 rows (aproximadamente)
 DELETE FROM `sylius_order`;
 /*!40000 ALTER TABLE `sylius_order` DISABLE KEYS */;
+INSERT INTO `sylius_order` (`id`, `shipping_address_id`, `billing_address_id`, `channel_id`, `promotion_coupon_id`, `customer_id`, `number`, `notes`, `state`, `checkout_completed_at`, `items_total`, `adjustments_total`, `total`, `created_at`, `updated_at`, `currency_code`, `locale_code`, `checkout_state`, `payment_state`, `shipping_state`, `token_value`, `customer_ip`) VALUES
+	(1, 7, 8, 1, NULL, 22, '000000003', NULL, 'new', '2018-01-19 19:04:10', 3900, 0, 3900, '2018-01-18 19:01:59', '2018-01-19 19:04:10', 'USD', 'es_ES', 'completed', 'awaiting_payment', 'shipped', 'LyNDKCBR36', '::1'),
+	(2, NULL, NULL, 1, NULL, NULL, NULL, NULL, 'cart', NULL, 7750, 0, 7750, '2018-01-18 21:26:48', '2018-01-18 21:27:46', 'USD', 'es_ES', 'cart', 'cart', 'cart', NULL, NULL),
+	(3, 9, NULL, 1, 2, 22, NULL, NULL, 'cart', NULL, 18750, 0, 18750, '2018-01-19 19:18:59', '2018-01-19 19:24:08', 'USD', 'es_ES', 'cart', 'cart', 'cart', NULL, NULL);
 /*!40000 ALTER TABLE `sylius_order` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_order_item
@@ -573,11 +600,16 @@ CREATE TABLE IF NOT EXISTS `sylius_order_item` (
   KEY `IDX_77B587ED3B69A9AF` (`variant_id`),
   CONSTRAINT `FK_77B587ED3B69A9AF` FOREIGN KEY (`variant_id`) REFERENCES `sylius_product_variant` (`id`),
   CONSTRAINT `FK_77B587ED8D9F6D38` FOREIGN KEY (`order_id`) REFERENCES `sylius_order` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_order_item: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_order_item: ~4 rows (aproximadamente)
 DELETE FROM `sylius_order_item`;
 /*!40000 ALTER TABLE `sylius_order_item` DISABLE KEYS */;
+INSERT INTO `sylius_order_item` (`id`, `order_id`, `variant_id`, `quantity`, `unit_price`, `units_total`, `adjustments_total`, `total`, `is_immutable`, `product_name`, `variant_name`) VALUES
+	(7, 2, 335, 1, 3800, 3800, 0, 3800, 0, NULL, NULL),
+	(8, 2, 334, 1, 3950, 3950, 0, 3950, 0, NULL, NULL),
+	(9, 1, 333, 1, 3900, 3900, 0, 3900, 0, 'Yezz 4E4', 'Yezz 4E4'),
+	(10, 3, 334, 5, 3950, 18750, 0, 18750, 0, NULL, NULL);
 /*!40000 ALTER TABLE `sylius_order_item` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_order_item_unit
@@ -594,11 +626,20 @@ CREATE TABLE IF NOT EXISTS `sylius_order_item_unit` (
   KEY `IDX_82BF226E7BE036FC` (`shipment_id`),
   CONSTRAINT `FK_82BF226E7BE036FC` FOREIGN KEY (`shipment_id`) REFERENCES `sylius_shipment` (`id`) ON DELETE SET NULL,
   CONSTRAINT `FK_82BF226EE415FB15` FOREIGN KEY (`order_item_id`) REFERENCES `sylius_order_item` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=174 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_order_item_unit: ~10 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_order_item_unit: ~8 rows (aproximadamente)
 DELETE FROM `sylius_order_item_unit`;
 /*!40000 ALTER TABLE `sylius_order_item_unit` DISABLE KEYS */;
+INSERT INTO `sylius_order_item_unit` (`id`, `order_item_id`, `shipment_id`, `adjustments_total`, `created_at`, `updated_at`) VALUES
+	(165, 7, NULL, 0, '2018-01-18 21:26:48', '2018-01-18 21:26:49'),
+	(166, 8, NULL, 0, '2018-01-18 21:27:45', '2018-01-18 21:27:46'),
+	(167, 9, NULL, 0, '2018-01-19 19:03:04', '2018-01-19 19:03:04'),
+	(169, 10, NULL, -200, '2018-01-19 19:19:51', '2018-01-19 19:24:08'),
+	(170, 10, NULL, -200, '2018-01-19 19:19:51', '2018-01-19 19:24:08'),
+	(171, 10, NULL, -200, '2018-01-19 19:19:51', '2018-01-19 19:24:08'),
+	(172, 10, NULL, -200, '2018-01-19 19:19:51', '2018-01-19 19:24:08'),
+	(173, 10, NULL, -200, '2018-01-19 19:24:08', '2018-01-19 19:24:08');
 /*!40000 ALTER TABLE `sylius_order_item_unit` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_order_sequence
@@ -614,7 +655,7 @@ CREATE TABLE IF NOT EXISTS `sylius_order_sequence` (
 DELETE FROM `sylius_order_sequence`;
 /*!40000 ALTER TABLE `sylius_order_sequence` DISABLE KEYS */;
 INSERT INTO `sylius_order_sequence` (`id`, `idx`, `version`) VALUES
-	(1, 1, 1);
+	(1, 3, 3);
 /*!40000 ALTER TABLE `sylius_order_sequence` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_payment
@@ -634,11 +675,16 @@ CREATE TABLE IF NOT EXISTS `sylius_payment` (
   KEY `IDX_D9191BD48D9F6D38` (`order_id`),
   CONSTRAINT `FK_D9191BD419883967` FOREIGN KEY (`method_id`) REFERENCES `sylius_payment_method` (`id`),
   CONSTRAINT `FK_D9191BD48D9F6D38` FOREIGN KEY (`order_id`) REFERENCES `sylius_order` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_payment: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_payment: ~4 rows (aproximadamente)
 DELETE FROM `sylius_payment`;
 /*!40000 ALTER TABLE `sylius_payment` DISABLE KEYS */;
+INSERT INTO `sylius_payment` (`id`, `method_id`, `order_id`, `currency_code`, `amount`, `state`, `details`, `created_at`, `updated_at`) VALUES
+	(5, 3, 4, 'USD', 3120, 'refunded', '[]', '2018-01-18 15:28:21', '2018-01-18 15:56:20'),
+	(7, 3, 2, 'USD', 7750, 'cart', '[]', '2018-01-18 21:26:48', '2018-01-18 21:27:46'),
+	(8, 3, 1, 'USD', 3900, 'new', '[]', '2018-01-19 19:03:04', '2018-01-19 19:07:39'),
+	(9, 3, 3, 'USD', 18750, 'cart', '[]', '2018-01-19 19:18:59', '2018-01-19 19:24:08');
 /*!40000 ALTER TABLE `sylius_payment` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_payment_method
@@ -701,16 +747,17 @@ CREATE TABLE IF NOT EXISTS `sylius_payment_method_translation` (
   UNIQUE KEY `sylius_payment_method_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_966BE3A12C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_966BE3A12C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_payment_method` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_payment_method_translation: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_payment_method_translation: ~4 rows (aproximadamente)
 DELETE FROM `sylius_payment_method_translation`;
 /*!40000 ALTER TABLE `sylius_payment_method_translation` DISABLE KEYS */;
 INSERT INTO `sylius_payment_method_translation` (`id`, `translatable_id`, `name`, `description`, `instructions`, `locale`) VALUES
 	(1, 1, 'Cash on delivery', 'Molestias possimus iure est temporibus aperiam.', NULL, 'en_US'),
-	(2, 2, 'Bank transfer', 'Similique enim qui dolor aut id voluptatem.', NULL, 'en_US'),
+	(2, 2, 'Bank transfer', 'Bank Transfer (Short Description)', NULL, 'en_US'),
 	(3, 3, 'Stripe Payment', 'Pay with Stripe', '- Step 1\r\n- Step 2', 'en_US'),
-	(4, 3, 'Pago Stripe', 'Pagar mediante Stripe', '- Paso 1\r\n- Paso 2', 'es_ES');
+	(4, 3, 'Pago Stripe', 'Pagar mediante Stripe', '- Paso 1\r\n- Paso 2', 'es_ES'),
+	(5, 2, 'Transferencia Bancaria', 'Transferencia Bancaria (Descripcion corta)', NULL, 'es_ES');
 /*!40000 ALTER TABLE `sylius_payment_method_translation` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_payment_security_token
@@ -724,12 +771,16 @@ CREATE TABLE IF NOT EXISTS `sylius_payment_security_token` (
   PRIMARY KEY (`hash`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_payment_security_token: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_payment_security_token: ~8 rows (aproximadamente)
 DELETE FROM `sylius_payment_security_token`;
 /*!40000 ALTER TABLE `sylius_payment_security_token` DISABLE KEYS */;
 INSERT INTO `sylius_payment_security_token` (`hash`, `details`, `after_url`, `target_url`, `gateway_name`) VALUES
 	('GA42xNR437BFW2cPFlsZilDLdmj9Nb61ZXxcJUZg-8I', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:2;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/en_US/order/after-pay?payum_token=GA42xNR437BFW2cPFlsZilDLdmj9Nb61ZXxcJUZg-8I', 'stripe'),
+	('nVbIt7QDRMcS-3-7dEXuLjm4MQhUG0-_rZQsoT-9daI', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/es_ES/order/after-pay?payum_token=nVbIt7QDRMcS-3-7dEXuLjm4MQhUG0-_rZQsoT-9daI', 'Offline'),
+	('P7o0knyfTZ9XkYsyprZddhFxC2UqmnXsniPMaOyp7TY', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/es_ES/order/after-pay?payum_token=P7o0knyfTZ9XkYsyprZddhFxC2UqmnXsniPMaOyp7TY', 'stripe'),
 	('qBzNVQJvPHiCSYDlnYxqjWcfXT3yhR4zTfs1FbiblYw', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:2;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/es_ES/order/after-pay?payum_token=vUq_XEzZs_YjbUfIvUh2TSeuCgREp63FY-AFaoBIub0', 'http://yezzstore.test/payment/capture/qBzNVQJvPHiCSYDlnYxqjWcfXT3yhR4zTfs1FbiblYw', 'stripe'),
+	('r-ibkH1LwPnZjS8TBw3VO6rOiWWEgke55L1_0-oDu40', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/es_ES/order/after-pay?payum_token=nVbIt7QDRMcS-3-7dEXuLjm4MQhUG0-_rZQsoT-9daI', 'http://yezzstore.test/payment/capture/r-ibkH1LwPnZjS8TBw3VO6rOiWWEgke55L1_0-oDu40', 'Offline'),
+	('SO6Jpk77aI7AEEwAjFWMqpPTm2lAPdqPiD2YvLmF7HM', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/es_ES/order/after-pay?payum_token=P7o0knyfTZ9XkYsyprZddhFxC2UqmnXsniPMaOyp7TY', 'http://yezzstore.test/payment/capture/SO6Jpk77aI7AEEwAjFWMqpPTm2lAPdqPiD2YvLmF7HM', 'stripe'),
 	('tXRMmYbMS3IHKDxu8ZLDSlCXjqLRWKRWZvBcxTMtQ1E', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:2;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/en_US/order/after-pay?payum_token=GA42xNR437BFW2cPFlsZilDLdmj9Nb61ZXxcJUZg-8I', 'http://yezzstore.test/payment/capture/tXRMmYbMS3IHKDxu8ZLDSlCXjqLRWKRWZvBcxTMtQ1E', 'stripe'),
 	('vUq_XEzZs_YjbUfIvUh2TSeuCgREp63FY-AFaoBIub0', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:2;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/es_ES/order/after-pay?payum_token=vUq_XEzZs_YjbUfIvUh2TSeuCgREp63FY-AFaoBIub0', 'stripe');
 /*!40000 ALTER TABLE `sylius_payment_security_token` ENABLE KEYS */;
@@ -749,11 +800,13 @@ CREATE TABLE IF NOT EXISTS `sylius_product` (
   UNIQUE KEY `UNIQ_677B9B7477153098` (`code`),
   KEY `IDX_677B9B74731E505` (`main_taxon_id`),
   CONSTRAINT `FK_677B9B74731E505` FOREIGN KEY (`main_taxon_id`) REFERENCES `sylius_taxon` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product: ~60 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product: ~1 rows (aproximadamente)
 DELETE FROM `sylius_product`;
 /*!40000 ALTER TABLE `sylius_product` DISABLE KEYS */;
+INSERT INTO `sylius_product` (`id`, `main_taxon_id`, `code`, `created_at`, `updated_at`, `enabled`, `variant_selection_method`, `average_rating`) VALUES
+	(64, 7, 'yezz-4e4', '2018-01-18 18:39:13', '2018-01-19 18:13:46', 1, 'choice', 4);
 /*!40000 ALTER TABLE `sylius_product` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_association
@@ -770,9 +823,9 @@ CREATE TABLE IF NOT EXISTS `sylius_product_association` (
   KEY `IDX_48E9CDAB4584665A` (`product_id`),
   CONSTRAINT `FK_48E9CDAB4584665A` FOREIGN KEY (`product_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE,
   CONSTRAINT `FK_48E9CDABB1E1C39` FOREIGN KEY (`association_type_id`) REFERENCES `sylius_product_association_type` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_association: ~10 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_association: ~0 rows (aproximadamente)
 DELETE FROM `sylius_product_association`;
 /*!40000 ALTER TABLE `sylius_product_association` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sylius_product_association` ENABLE KEYS */;
@@ -789,7 +842,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_association_product` (
   CONSTRAINT `FK_A427B983EFB9C8A5` FOREIGN KEY (`association_id`) REFERENCES `sylius_product_association` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_association_product: ~30 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_association_product: ~0 rows (aproximadamente)
 DELETE FROM `sylius_product_association_product`;
 /*!40000 ALTER TABLE `sylius_product_association_product` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sylius_product_association_product` ENABLE KEYS */;
@@ -805,7 +858,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_association_type` (
   UNIQUE KEY `UNIQ_CCB8914C77153098` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_association_type: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_association_type: ~0 rows (aproximadamente)
 DELETE FROM `sylius_product_association_type`;
 /*!40000 ALTER TABLE `sylius_product_association_type` DISABLE KEYS */;
 INSERT INTO `sylius_product_association_type` (`id`, `code`, `created_at`, `updated_at`) VALUES
@@ -825,7 +878,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_association_type_translation` (
   CONSTRAINT `FK_4F618E52C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product_association_type` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_association_type_translation: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_association_type_translation: ~0 rows (aproximadamente)
 DELETE FROM `sylius_product_association_type_translation`;
 /*!40000 ALTER TABLE `sylius_product_association_type_translation` DISABLE KEYS */;
 INSERT INTO `sylius_product_association_type_translation` (`id`, `translatable_id`, `name`, `locale`) VALUES
@@ -846,11 +899,17 @@ CREATE TABLE IF NOT EXISTS `sylius_product_attribute` (
   `position` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_BFAF484A77153098` (`code`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_attribute: ~10 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_attribute: ~5 rows (aproximadamente)
 DELETE FROM `sylius_product_attribute`;
 /*!40000 ALTER TABLE `sylius_product_attribute` DISABLE KEYS */;
+INSERT INTO `sylius_product_attribute` (`id`, `code`, `type`, `storage_type`, `configuration`, `created_at`, `updated_at`, `position`) VALUES
+	(11, 'color', 'select', 'json', 'a:4:{s:7:"choices";a:6:{s:36:"740eaa0c-fc54-11e7-8ad4-1078d2435567";a:2:{s:5:"en_US";s:5:"Black";s:5:"es_ES";s:5:"Negro";}s:36:"13c01b46-fc5d-11e7-b21b-1078d2435567";a:2:{s:5:"en_US";s:4:"Pink";s:5:"es_ES";s:6:"Rosado";}s:36:"431da516-fc80-11e7-9573-1078d2435567";a:2:{s:5:"en_US";s:5:"White";s:5:"es_ES";s:6:"Blanco";}s:36:"432011ca-fc80-11e7-9d6b-1078d2435567";a:2:{s:5:"en_US";s:4:"Blue";s:5:"es_ES";s:4:"Azul";}s:36:"43201b84-fc80-11e7-94d2-1078d2435567";a:2:{s:5:"en_US";s:6:"Silver";s:5:"es_ES";s:8:"Plateado";}s:36:"432024a8-fc80-11e7-a0f1-1078d2435567";a:2:{s:5:"en_US";s:9:"Gun Metal";s:5:"es_ES";s:9:"Gun Metal";}}s:8:"multiple";b:1;s:3:"min";N;s:3:"max";N;}', '2018-01-18 13:35:30', '2018-01-18 18:49:33', 1),
+	(12, 'chipset', 'text', 'text', 'a:2:{s:3:"min";N;s:3:"max";N;}', '2018-01-18 19:30:37', '2018-01-18 19:36:07', 0),
+	(13, 'front-camera', 'select', 'json', 'a:4:{s:7:"choices";a:2:{s:36:"8262e7d0-fc86-11e7-985d-1078d2435567";a:2:{s:5:"en_US";s:3:"2MP";s:5:"es_ES";s:3:"2MP";}s:36:"82630d14-fc86-11e7-88d5-1078d2435567";a:2:{s:5:"en_US";s:3:"5MP";s:5:"es_ES";s:3:"5MP";}}s:8:"multiple";b:0;s:3:"min";N;s:3:"max";N;}', '2018-01-18 19:33:49', '2018-01-18 19:34:03', 2),
+	(14, 'rear-camera', 'select', 'json', 'a:4:{s:7:"choices";a:4:{s:36:"5eae675a-fc87-11e7-aded-1078d2435567";a:2:{s:5:"en_US";s:3:"VGA";s:5:"es_ES";s:3:"VGA";}s:36:"5eae7d58-fc87-11e7-a599-1078d2435567";a:2:{s:5:"en_US";s:3:"5MP";s:5:"es_ES";s:3:"5MP";}s:36:"5eae8262-fc87-11e7-b4fb-1078d2435567";a:2:{s:5:"en_US";s:3:"8MP";s:5:"es_ES";s:3:"8MP";}s:36:"5eae8776-fc87-11e7-b13f-1078d2435567";a:2:{s:5:"en_US";s:4:"13MP";s:5:"es_ES";s:4:"13MP";}}s:8:"multiple";b:0;s:3:"min";N;s:3:"max";N;}', '2018-01-18 19:39:59', '2018-01-18 19:40:23', 3),
+	(15, 'carriers', 'select', 'json', 'a:4:{s:7:"choices";a:8:{s:36:"da858074-fd46-11e7-81ab-1078d2435567";a:1:{s:5:"en_US";s:8:"Movistar";}s:36:"da87549e-fd46-11e7-8a0c-1078d2435567";a:1:{s:5:"en_US";s:8:"Movilnet";}s:36:"da875bf6-fd46-11e7-8f78-1078d2435567";a:1:{s:5:"en_US";s:7:"Digitel";}s:36:"da8761be-fd46-11e7-b101-1078d2435567";a:1:{s:5:"en_US";s:8:"T-Mobile";}s:36:"da8766dc-fd46-11e7-93d0-1078d2435567";a:1:{s:5:"en_US";s:4:"AT&T";}s:36:"da876f74-fd46-11e7-917e-1078d2435567";a:1:{s:5:"en_US";s:7:"Verizon";}s:36:"da877a6e-fd46-11e7-b162-1078d2435567";a:1:{s:5:"en_US";s:5:"Claro";}s:36:"da878086-fd46-11e7-822c-1078d2435567";a:1:{s:5:"en_US";s:6:"Telcel";}}s:8:"multiple";b:1;s:3:"min";N;s:3:"max";N;}', '2018-01-19 18:30:40', '2018-01-19 18:30:41', 5);
 /*!40000 ALTER TABLE `sylius_product_attribute` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_attribute_translation
@@ -864,11 +923,22 @@ CREATE TABLE IF NOT EXISTS `sylius_product_attribute_translation` (
   UNIQUE KEY `sylius_product_attribute_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_93850EBA2C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_93850EBA2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product_attribute` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Volcando datos para la tabla yezzstore.sylius_product_attribute_translation: ~10 rows (aproximadamente)
 DELETE FROM `sylius_product_attribute_translation`;
 /*!40000 ALTER TABLE `sylius_product_attribute_translation` DISABLE KEYS */;
+INSERT INTO `sylius_product_attribute_translation` (`id`, `translatable_id`, `name`, `locale`) VALUES
+	(11, 11, 'Color', 'en_US'),
+	(12, 11, 'Color', 'es_ES'),
+	(13, 12, 'Chipset', 'en_US'),
+	(14, 12, 'Chipset', 'es_ES'),
+	(15, 13, 'Front Camera', 'en_US'),
+	(16, 13, 'Cámara Frontal', 'es_ES'),
+	(17, 14, 'Rear Camera', 'en_US'),
+	(18, 14, 'Cámara Trasera', 'es_ES'),
+	(19, 15, 'Carriers', 'en_US'),
+	(20, 15, 'Operadoras', 'es_ES');
 /*!40000 ALTER TABLE `sylius_product_attribute_translation` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_attribute_value
@@ -890,11 +960,20 @@ CREATE TABLE IF NOT EXISTS `sylius_product_attribute_value` (
   KEY `IDX_8A053E54B6E62EFA` (`attribute_id`),
   CONSTRAINT `FK_8A053E544584665A` FOREIGN KEY (`product_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE,
   CONSTRAINT `FK_8A053E54B6E62EFA` FOREIGN KEY (`attribute_id`) REFERENCES `sylius_product_attribute` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=151 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=172 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_attribute_value: ~150 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_attribute_value: ~8 rows (aproximadamente)
 DELETE FROM `sylius_product_attribute_value`;
 /*!40000 ALTER TABLE `sylius_product_attribute_value` DISABLE KEYS */;
+INSERT INTO `sylius_product_attribute_value` (`id`, `product_id`, `attribute_id`, `text_value`, `boolean_value`, `integer_value`, `float_value`, `datetime_value`, `date_value`, `json_value`, `locale_code`) VALUES
+	(164, 64, 11, NULL, NULL, NULL, NULL, NULL, NULL, '["740eaa0c-fc54-11e7-8ad4-1078d2435567","432011ca-fc80-11e7-9d6b-1078d2435567","13c01b46-fc5d-11e7-b21b-1078d2435567","431da516-fc80-11e7-9573-1078d2435567"]', 'en_US'),
+	(165, 64, 11, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES'),
+	(166, 64, 13, NULL, NULL, NULL, NULL, NULL, NULL, '["8262e7d0-fc86-11e7-985d-1078d2435567"]', 'en_US'),
+	(167, 64, 14, NULL, NULL, NULL, NULL, NULL, NULL, '["5eae7d58-fc87-11e7-a599-1078d2435567"]', 'en_US'),
+	(168, 64, 15, NULL, NULL, NULL, NULL, NULL, NULL, '["da8766dc-fd46-11e7-93d0-1078d2435567","da877a6e-fd46-11e7-b162-1078d2435567","da87549e-fd46-11e7-8a0c-1078d2435567","da858074-fd46-11e7-81ab-1078d2435567","da8761be-fd46-11e7-b101-1078d2435567","da876f74-fd46-11e7-917e-1078d2435567"]', 'en_US'),
+	(169, 64, 13, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES'),
+	(170, 64, 14, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES'),
+	(171, 64, 15, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES');
 /*!40000 ALTER TABLE `sylius_product_attribute_value` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_channels
@@ -909,9 +988,11 @@ CREATE TABLE IF NOT EXISTS `sylius_product_channels` (
   CONSTRAINT `FK_F9EF269B72F5A1AA` FOREIGN KEY (`channel_id`) REFERENCES `sylius_channel` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_channels: ~60 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_channels: ~1 rows (aproximadamente)
 DELETE FROM `sylius_product_channels`;
 /*!40000 ALTER TABLE `sylius_product_channels` DISABLE KEYS */;
+INSERT INTO `sylius_product_channels` (`product_id`, `channel_id`) VALUES
+	(64, 1);
 /*!40000 ALTER TABLE `sylius_product_channels` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_image
@@ -924,11 +1005,19 @@ CREATE TABLE IF NOT EXISTS `sylius_product_image` (
   PRIMARY KEY (`id`),
   KEY `IDX_88C64B2D7E3C61F9` (`owner_id`),
   CONSTRAINT `FK_88C64B2D7E3C61F9` FOREIGN KEY (`owner_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=121 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=133 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_image: ~120 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_image: ~7 rows (aproximadamente)
 DELETE FROM `sylius_product_image`;
 /*!40000 ALTER TABLE `sylius_product_image` DISABLE KEYS */;
+INSERT INTO `sylius_product_image` (`id`, `owner_id`, `type`, `path`) VALUES
+	(126, 64, NULL, '2e/da/74b2b9294e289a4deea278189a09.png'),
+	(127, 64, NULL, 'a6/1f/0336b881f4200a00b4f442f1dc48.png'),
+	(128, 64, NULL, '70/ef/527114de219e4b68928622c6025d.png'),
+	(129, 64, NULL, 'd4/32/5cd8d9e08bee15f4a7098c44717c.png'),
+	(130, 64, NULL, '9b/fd/4f36d712700e3334d777608cbd4a.png'),
+	(131, 64, NULL, '25/99/25596b776d4180655ecf5ce9a6dc.png'),
+	(132, 64, NULL, '14/88/3363ad66d4cc8be0cc8bf3696d07.png');
 /*!40000 ALTER TABLE `sylius_product_image` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_image_product_variants
@@ -943,9 +1032,20 @@ CREATE TABLE IF NOT EXISTS `sylius_product_image_product_variants` (
   CONSTRAINT `FK_8FFDAE8D3DA5256D` FOREIGN KEY (`image_id`) REFERENCES `sylius_product_image` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_image_product_variants: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_image_product_variants: ~10 rows (aproximadamente)
 DELETE FROM `sylius_product_image_product_variants`;
 /*!40000 ALTER TABLE `sylius_product_image_product_variants` DISABLE KEYS */;
+INSERT INTO `sylius_product_image_product_variants` (`image_id`, `variant_id`) VALUES
+	(126, 333),
+	(127, 333),
+	(128, 335),
+	(129, 335),
+	(130, 336),
+	(131, 334),
+	(132, 333),
+	(132, 334),
+	(132, 335),
+	(132, 336);
 /*!40000 ALTER TABLE `sylius_product_image_product_variants` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_option
@@ -960,14 +1060,11 @@ CREATE TABLE IF NOT EXISTS `sylius_product_option` (
   UNIQUE KEY `UNIQ_E4C0EBEF77153098` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_option: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_option: ~1 rows (aproximadamente)
 DELETE FROM `sylius_product_option`;
 /*!40000 ALTER TABLE `sylius_product_option` DISABLE KEYS */;
 INSERT INTO `sylius_product_option` (`id`, `code`, `created_at`, `updated_at`, `position`) VALUES
-	(1, 'mug_type', '2018-01-16 18:26:05', '2018-01-16 18:26:05', 0),
-	(2, 'sticker_size', '2018-01-16 18:26:06', '2018-01-16 18:26:06', 1),
-	(3, 't_shirt_color', '2018-01-16 18:26:08', '2018-01-16 18:26:08', 2),
-	(4, 't_shirt_size', '2018-01-16 18:26:08', '2018-01-16 18:26:08', 3);
+	(1, 'cellphone_color', '2018-01-16 18:26:05', '2018-01-16 18:26:05', 0);
 /*!40000 ALTER TABLE `sylius_product_option` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_options
@@ -982,9 +1079,11 @@ CREATE TABLE IF NOT EXISTS `sylius_product_options` (
   CONSTRAINT `FK_2B5FF009A7C41D6F` FOREIGN KEY (`option_id`) REFERENCES `sylius_product_option` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_options: ~60 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_options: ~1 rows (aproximadamente)
 DELETE FROM `sylius_product_options`;
 /*!40000 ALTER TABLE `sylius_product_options` DISABLE KEYS */;
+INSERT INTO `sylius_product_options` (`product_id`, `option_id`) VALUES
+	(64, 1);
 /*!40000 ALTER TABLE `sylius_product_options` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_option_translation
@@ -998,16 +1097,14 @@ CREATE TABLE IF NOT EXISTS `sylius_product_option_translation` (
   UNIQUE KEY `sylius_product_option_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_CBA491AD2C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_CBA491AD2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product_option` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_option_translation: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_option_translation: ~2 rows (aproximadamente)
 DELETE FROM `sylius_product_option_translation`;
 /*!40000 ALTER TABLE `sylius_product_option_translation` DISABLE KEYS */;
 INSERT INTO `sylius_product_option_translation` (`id`, `translatable_id`, `name`, `locale`) VALUES
-	(1, 1, 'Mug type', 'en_US'),
-	(2, 2, 'Sticker size', 'en_US'),
-	(3, 3, 'T-Shirt color', 'en_US'),
-	(4, 4, 'T-Shirt size', 'en_US');
+	(1, 1, 'Color', 'en_US'),
+	(5, 1, 'Color', 'es_ES');
 /*!40000 ALTER TABLE `sylius_product_option_translation` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_option_value
@@ -1020,26 +1117,20 @@ CREATE TABLE IF NOT EXISTS `sylius_product_option_value` (
   UNIQUE KEY `UNIQ_F7FF7D4B77153098` (`code`),
   KEY `IDX_F7FF7D4BA7C41D6F` (`option_id`),
   CONSTRAINT `FK_F7FF7D4BA7C41D6F` FOREIGN KEY (`option_id`) REFERENCES `sylius_product_option` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_option_value: ~14 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_option_value: ~8 rows (aproximadamente)
 DELETE FROM `sylius_product_option_value`;
 /*!40000 ALTER TABLE `sylius_product_option_value` DISABLE KEYS */;
 INSERT INTO `sylius_product_option_value` (`id`, `option_id`, `code`) VALUES
-	(1, 1, 'mug_type_medium'),
-	(2, 1, 'mug_type_double'),
-	(3, 1, 'mug_type_monster'),
-	(4, 2, 'sticker_size_3'),
-	(5, 2, 'sticker_size_5'),
-	(6, 2, 'sticker_size_7'),
-	(7, 3, 't_shirt_color_red'),
-	(8, 3, 't_shirt_color_black'),
-	(9, 3, 't_shirt_color_white'),
-	(10, 4, 't_shirt_size_s'),
-	(11, 4, 't_shirt_size_m'),
-	(12, 4, 't_shirt_size_l'),
-	(13, 4, 't_shirt_size_xl'),
-	(14, 4, 't_shirt_size_xxl');
+	(1, 1, 'color-black'),
+	(2, 1, 'color-white'),
+	(3, 1, 'color-gray'),
+	(15, 1, 'color-silver'),
+	(16, 1, 'color-gunmetal'),
+	(17, 1, 'color-pink'),
+	(18, 1, 'color-blue'),
+	(19, 1, 'color-red');
 /*!40000 ALTER TABLE `sylius_product_option_value` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_option_value_translation
@@ -1053,26 +1144,28 @@ CREATE TABLE IF NOT EXISTS `sylius_product_option_value_translation` (
   UNIQUE KEY `sylius_product_option_value_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_8D4382DC2C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_8D4382DC2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product_option_value` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_option_value_translation: ~14 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_option_value_translation: ~16 rows (aproximadamente)
 DELETE FROM `sylius_product_option_value_translation`;
 /*!40000 ALTER TABLE `sylius_product_option_value_translation` DISABLE KEYS */;
 INSERT INTO `sylius_product_option_value_translation` (`id`, `translatable_id`, `value`, `locale`) VALUES
-	(1, 1, 'Medium mug', 'en_US'),
-	(2, 2, 'Double mug', 'en_US'),
-	(3, 3, 'Monster mug', 'en_US'),
-	(4, 4, '3"', 'en_US'),
-	(5, 5, '5"', 'en_US'),
-	(6, 6, '7"', 'en_US'),
-	(7, 7, 'Red', 'en_US'),
-	(8, 8, 'Black', 'en_US'),
-	(9, 9, 'White', 'en_US'),
-	(10, 10, 'S', 'en_US'),
-	(11, 11, 'M', 'en_US'),
-	(12, 12, 'L', 'en_US'),
-	(13, 13, 'XL', 'en_US'),
-	(14, 14, 'XXL', 'en_US');
+	(1, 1, 'Black', 'en_US'),
+	(2, 2, 'White', 'en_US'),
+	(3, 3, 'Gray', 'en_US'),
+	(15, 15, 'Silver', 'en_US'),
+	(16, 15, 'Plateado', 'es_ES'),
+	(17, 16, 'Gun Metal', 'en_US'),
+	(18, 16, 'Gun Metal', 'es_ES'),
+	(19, 17, 'Pink', 'en_US'),
+	(20, 17, 'Rosado', 'es_ES'),
+	(21, 18, 'Blue', 'en_US'),
+	(22, 18, 'Azul', 'es_ES'),
+	(23, 19, 'Red', 'en_US'),
+	(24, 19, 'Rojo', 'es_ES'),
+	(25, 1, 'Negro', 'es_ES'),
+	(26, 2, 'Blanco', 'es_ES'),
+	(27, 3, 'Gris', 'es_ES');
 /*!40000 ALTER TABLE `sylius_product_option_value_translation` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_review
@@ -1092,11 +1185,13 @@ CREATE TABLE IF NOT EXISTS `sylius_product_review` (
   KEY `IDX_C7056A99F675F31B` (`author_id`),
   CONSTRAINT `FK_C7056A994584665A` FOREIGN KEY (`product_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE,
   CONSTRAINT `FK_C7056A99F675F31B` FOREIGN KEY (`author_id`) REFERENCES `sylius_customer` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_review: ~40 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_review: ~0 rows (aproximadamente)
 DELETE FROM `sylius_product_review`;
 /*!40000 ALTER TABLE `sylius_product_review` DISABLE KEYS */;
+INSERT INTO `sylius_product_review` (`id`, `product_id`, `author_id`, `title`, `rating`, `comment`, `status`, `created_at`, `updated_at`) VALUES
+	(42, 64, 22, 'Great Product', 4, 'YEAH! SHOP', 'accepted', '2018-01-19 18:10:37', '2018-01-19 18:13:46');
 /*!40000 ALTER TABLE `sylius_product_review` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_taxon
@@ -1112,11 +1207,15 @@ CREATE TABLE IF NOT EXISTS `sylius_product_taxon` (
   KEY `IDX_169C6CD9DE13F470` (`taxon_id`),
   CONSTRAINT `FK_169C6CD94584665A` FOREIGN KEY (`product_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE,
   CONSTRAINT `FK_169C6CD9DE13F470` FOREIGN KEY (`taxon_id`) REFERENCES `sylius_taxon` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_taxon: ~75 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_taxon: ~2 rows (aproximadamente)
 DELETE FROM `sylius_product_taxon`;
 /*!40000 ALTER TABLE `sylius_product_taxon` DISABLE KEYS */;
+INSERT INTO `sylius_product_taxon` (`id`, `product_id`, `taxon_id`, `position`) VALUES
+	(85, 64, 1, 0),
+	(86, 64, 5, 0),
+	(87, 64, 7, 0);
 /*!40000 ALTER TABLE `sylius_product_taxon` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_translation
@@ -1136,11 +1235,14 @@ CREATE TABLE IF NOT EXISTS `sylius_product_translation` (
   UNIQUE KEY `UNIQ_105A9084180C698989D9B62` (`locale`,`slug`),
   KEY `IDX_105A9082C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_105A9082C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_translation: ~60 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_translation: ~2 rows (aproximadamente)
 DELETE FROM `sylius_product_translation`;
 /*!40000 ALTER TABLE `sylius_product_translation` DISABLE KEYS */;
+INSERT INTO `sylius_product_translation` (`id`, `translatable_id`, `name`, `slug`, `description`, `meta_keywords`, `meta_description`, `short_description`, `locale`) VALUES
+	(67, 64, 'Yezz 4E4', 'yezz-4e4', 'Yezz 4E4', NULL, NULL, 'Yezz 4E4 Description Short', 'en_US'),
+	(68, 64, 'Yezz 4E4', 'yezz-4e4', 'Yezz 4E4', NULL, NULL, 'Yezz 4E4 Descripcion Corta', 'es_ES');
 /*!40000 ALTER TABLE `sylius_product_translation` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_variant
@@ -1171,11 +1273,16 @@ CREATE TABLE IF NOT EXISTS `sylius_product_variant` (
   CONSTRAINT `FK_A29B5234584665A` FOREIGN KEY (`product_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE,
   CONSTRAINT `FK_A29B5239DF894ED` FOREIGN KEY (`tax_category_id`) REFERENCES `sylius_tax_category` (`id`) ON DELETE SET NULL,
   CONSTRAINT `FK_A29B5239E2D1A41` FOREIGN KEY (`shipping_category_id`) REFERENCES `sylius_shipping_category` (`id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=331 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=337 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_variant: ~330 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_variant: ~4 rows (aproximadamente)
 DELETE FROM `sylius_product_variant`;
 /*!40000 ALTER TABLE `sylius_product_variant` DISABLE KEYS */;
+INSERT INTO `sylius_product_variant` (`id`, `product_id`, `tax_category_id`, `shipping_category_id`, `code`, `created_at`, `updated_at`, `on_hold`, `on_hand`, `tracked`, `width`, `height`, `depth`, `weight`, `position`, `shipping_required`, `version`) VALUES
+	(333, 64, NULL, NULL, 'yezz-4e4-black', '2018-01-18 18:44:53', '2018-01-19 19:04:10', 1, 5000, 1, NULL, NULL, NULL, NULL, 0, 0, 3),
+	(334, 64, NULL, NULL, 'yezz-4e4-white', '2018-01-18 18:44:53', '2018-01-18 18:55:54', 0, 150, 1, NULL, NULL, NULL, NULL, 1, 0, 3),
+	(335, 64, NULL, NULL, 'yezz-4e4-pink', '2018-01-18 18:44:53', '2018-01-18 18:55:37', 0, 500, 1, NULL, NULL, NULL, NULL, 2, 0, 2),
+	(336, 64, NULL, NULL, 'yezz-4e4-blue', '2018-01-18 18:44:53', '2018-01-18 21:25:42', 0, 0, 1, NULL, NULL, NULL, NULL, 3, 1, 3);
 /*!40000 ALTER TABLE `sylius_product_variant` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_variant_option_value
@@ -1190,9 +1297,14 @@ CREATE TABLE IF NOT EXISTS `sylius_product_variant_option_value` (
   CONSTRAINT `FK_76CDAFA1D957CA06` FOREIGN KEY (`option_value_id`) REFERENCES `sylius_product_option_value` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_variant_option_value: ~540 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_variant_option_value: ~4 rows (aproximadamente)
 DELETE FROM `sylius_product_variant_option_value`;
 /*!40000 ALTER TABLE `sylius_product_variant_option_value` DISABLE KEYS */;
+INSERT INTO `sylius_product_variant_option_value` (`variant_id`, `option_value_id`) VALUES
+	(333, 1),
+	(334, 2),
+	(335, 17),
+	(336, 18);
 /*!40000 ALTER TABLE `sylius_product_variant_option_value` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_variant_translation
@@ -1206,11 +1318,20 @@ CREATE TABLE IF NOT EXISTS `sylius_product_variant_translation` (
   UNIQUE KEY `sylius_product_variant_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_8DC18EDC2C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_8DC18EDC2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product_variant` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=331 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=342 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_variant_translation: ~330 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_variant_translation: ~8 rows (aproximadamente)
 DELETE FROM `sylius_product_variant_translation`;
 /*!40000 ALTER TABLE `sylius_product_variant_translation` DISABLE KEYS */;
+INSERT INTO `sylius_product_variant_translation` (`id`, `translatable_id`, `name`, `locale`) VALUES
+	(334, 333, 'Yezz 4E4', 'en_US'),
+	(335, 334, 'Yezz 4E4', 'en_US'),
+	(336, 335, 'Yezz 4E4', 'en_US'),
+	(337, 336, 'Yezz 4E4', 'en_US'),
+	(338, 333, 'Yezz 4E4', 'es_ES'),
+	(339, 334, 'Yezz 4E4', 'es_ES'),
+	(340, 335, 'Yezz 4E4', 'es_ES'),
+	(341, 336, 'Yezz 4E4', 'es_ES');
 /*!40000 ALTER TABLE `sylius_product_variant_translation` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_promotion
@@ -1231,13 +1352,13 @@ CREATE TABLE IF NOT EXISTS `sylius_promotion` (
   `updated_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_F157396377153098` (`code`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_promotion: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_promotion: ~1 rows (aproximadamente)
 DELETE FROM `sylius_promotion`;
 /*!40000 ALTER TABLE `sylius_promotion` DISABLE KEYS */;
 INSERT INTO `sylius_promotion` (`id`, `code`, `name`, `description`, `priority`, `exclusive`, `usage_limit`, `used`, `coupon_based`, `starts_at`, `ends_at`, `created_at`, `updated_at`) VALUES
-	(1, 'christmas', 'Christmas', 'Sunt a commodi ut ipsum.', 0, 1, NULL, 1, 0, NULL, NULL, '2018-01-16 18:26:05', '2018-01-17 18:23:51');
+	(3, 'YEZZ4E4-PROMO', 'Promocion 4E4', NULL, 0, 0, 5, 1, 1, '2018-01-19 12:00:00', '2018-01-20 15:30:00', '2018-01-18 15:29:54', '2018-01-19 19:18:37');
 /*!40000 ALTER TABLE `sylius_promotion` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_promotion_action
@@ -1250,13 +1371,14 @@ CREATE TABLE IF NOT EXISTS `sylius_promotion_action` (
   PRIMARY KEY (`id`),
   KEY `IDX_933D0915139DF194` (`promotion_id`),
   CONSTRAINT `FK_933D0915139DF194` FOREIGN KEY (`promotion_id`) REFERENCES `sylius_promotion` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Volcando datos para la tabla yezzstore.sylius_promotion_action: ~2 rows (aproximadamente)
 DELETE FROM `sylius_promotion_action`;
 /*!40000 ALTER TABLE `sylius_promotion_action` DISABLE KEYS */;
 INSERT INTO `sylius_promotion_action` (`id`, `promotion_id`, `type`, `configuration`) VALUES
-	(1, 1, 'order_percentage_discount', 'a:1:{s:10:"percentage";d:0.15;}');
+	(4, 3, 'order_fixed_discount', 'a:1:{s:6:"US_WEB";a:2:{s:6:"amount";i:1000;s:7:"filters";a:3:{s:18:"price_range_filter";a:2:{s:3:"min";N;s:3:"max";N;}s:13:"taxons_filter";a:1:{s:6:"taxons";a:0:{}}s:15:"products_filter";a:1:{s:8:"products";a:1:{i:0;s:8:"yezz-4e4";}}}}}'),
+	(5, 3, 'unit_percentage_discount', 'a:1:{s:6:"US_WEB";a:2:{s:10:"percentage";d:0.01;s:7:"filters";a:3:{s:18:"price_range_filter";a:2:{s:3:"min";N;s:3:"max";N;}s:13:"taxons_filter";a:1:{s:6:"taxons";a:0:{}}s:15:"products_filter";a:1:{s:8:"products";a:1:{i:0;s:8:"yezz-4e4";}}}}}');
 /*!40000 ALTER TABLE `sylius_promotion_action` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_promotion_channels
@@ -1275,7 +1397,7 @@ CREATE TABLE IF NOT EXISTS `sylius_promotion_channels` (
 DELETE FROM `sylius_promotion_channels`;
 /*!40000 ALTER TABLE `sylius_promotion_channels` DISABLE KEYS */;
 INSERT INTO `sylius_promotion_channels` (`promotion_id`, `channel_id`) VALUES
-	(1, 1);
+	(3, 1);
 /*!40000 ALTER TABLE `sylius_promotion_channels` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_promotion_coupon
@@ -1294,11 +1416,17 @@ CREATE TABLE IF NOT EXISTS `sylius_promotion_coupon` (
   UNIQUE KEY `UNIQ_B04EBA8577153098` (`code`),
   KEY `IDX_B04EBA85139DF194` (`promotion_id`),
   CONSTRAINT `FK_B04EBA85139DF194` FOREIGN KEY (`promotion_id`) REFERENCES `sylius_promotion` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_promotion_coupon: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_promotion_coupon: ~5 rows (aproximadamente)
 DELETE FROM `sylius_promotion_coupon`;
 /*!40000 ALTER TABLE `sylius_promotion_coupon` DISABLE KEYS */;
+INSERT INTO `sylius_promotion_coupon` (`id`, `promotion_id`, `code`, `usage_limit`, `used`, `expires_at`, `created_at`, `updated_at`, `per_customer_usage_limit`) VALUES
+	(1, 3, '2F091', 1, 0, '2018-01-31 00:00:00', '2018-01-18 15:30:46', '2018-01-18 15:42:49', 1),
+	(2, 3, 'F98F2', 1, 0, '2018-01-31 00:00:00', '2018-01-18 15:30:46', '2018-01-18 15:42:55', 1),
+	(3, 3, '28904', 1, 0, '2018-01-31 00:00:00', '2018-01-18 15:30:46', '2018-01-18 15:43:01', 1),
+	(4, 3, 'AFFD3', 1, 0, '2018-01-31 00:00:00', '2018-01-18 15:30:46', '2018-01-18 15:43:07', 1),
+	(5, 3, 'DEE57', 1, 0, '2018-01-31 00:00:00', '2018-01-18 15:30:46', '2018-01-18 15:43:13', 1);
 /*!40000 ALTER TABLE `sylius_promotion_coupon` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_promotion_order
@@ -1316,6 +1444,8 @@ CREATE TABLE IF NOT EXISTS `sylius_promotion_order` (
 -- Volcando datos para la tabla yezzstore.sylius_promotion_order: ~1 rows (aproximadamente)
 DELETE FROM `sylius_promotion_order`;
 /*!40000 ALTER TABLE `sylius_promotion_order` DISABLE KEYS */;
+INSERT INTO `sylius_promotion_order` (`order_id`, `promotion_id`) VALUES
+	(3, 3);
 /*!40000 ALTER TABLE `sylius_promotion_order` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_promotion_rule
@@ -1328,13 +1458,14 @@ CREATE TABLE IF NOT EXISTS `sylius_promotion_rule` (
   PRIMARY KEY (`id`),
   KEY `IDX_2C188EA8139DF194` (`promotion_id`),
   CONSTRAINT `FK_2C188EA8139DF194` FOREIGN KEY (`promotion_id`) REFERENCES `sylius_promotion` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Volcando datos para la tabla yezzstore.sylius_promotion_rule: ~2 rows (aproximadamente)
 DELETE FROM `sylius_promotion_rule`;
 /*!40000 ALTER TABLE `sylius_promotion_rule` DISABLE KEYS */;
 INSERT INTO `sylius_promotion_rule` (`id`, `promotion_id`, `type`, `configuration`) VALUES
-	(1, 1, 'cart_quantity', 'a:1:{s:5:"count";i:0;}');
+	(5, 3, 'contains_product', 'a:1:{s:12:"product_code";s:8:"yezz-4e4";}'),
+	(6, 3, 'cart_quantity', 'a:1:{s:5:"count";i:5;}');
 /*!40000 ALTER TABLE `sylius_promotion_rule` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_province
@@ -1469,7 +1600,7 @@ CREATE TABLE IF NOT EXISTS `sylius_shipping_method_translation` (
   CONSTRAINT `FK_2B37DB3D2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_shipping_method` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_shipping_method_translation: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_shipping_method_translation: ~5 rows (aproximadamente)
 DELETE FROM `sylius_shipping_method_translation`;
 /*!40000 ALTER TABLE `sylius_shipping_method_translation` DISABLE KEYS */;
 INSERT INTO `sylius_shipping_method_translation` (`id`, `translatable_id`, `name`, `description`, `locale`) VALUES
@@ -1508,12 +1639,12 @@ CREATE TABLE IF NOT EXISTS `sylius_shop_user` (
   CONSTRAINT `FK_7C2B74809395C3F3` FOREIGN KEY (`customer_id`) REFERENCES `sylius_customer` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_shop_user: ~22 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_shop_user: ~2 rows (aproximadamente)
 DELETE FROM `sylius_shop_user`;
 /*!40000 ALTER TABLE `sylius_shop_user` DISABLE KEYS */;
 INSERT INTO `sylius_shop_user` (`id`, `customer_id`, `username`, `username_canonical`, `enabled`, `salt`, `password`, `last_login`, `password_reset_token`, `password_requested_at`, `email_verification_token`, `verified_at`, `locked`, `expires_at`, `credentials_expire_at`, `roles`, `email`, `email_canonical`, `created_at`, `updated_at`) VALUES
 	(1, 1, 'shop@example.com', 'shop@example.com', 1, 'modfilvz90gkogccswc00w4ckscw0s4', 'RhZ8BvZccgWSDlbQx1R2IWt9O1/6CNwMu3A5mpCoH+KtgYQr5G3gP8zJxKbiC0kSyinYOEfwJhZbdbGhIEM6lA==', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'a:1:{i:0;s:9:"ROLE_USER";}', NULL, NULL, '2018-01-16 18:26:05', '2018-01-16 18:26:05'),
-	(22, 22, 'juliohernandezs@gmail.com', 'juliohernandezs@gmail.com', 1, 'ql89y2h6eqs08w4gwckss8800s0cw0w', 'ERD3jsvzvWCy/SQ1eJscysfqEOdemkBlKEJ8fOvJRjzwegXCM924oFQrvTjepyc3Llz92ZETKKGDu1l2YlckcQ==', '2018-01-17 18:16:37', NULL, NULL, 'k~UC1rfU_re8UUvY', NULL, 0, NULL, NULL, 'a:1:{i:0;s:9:"ROLE_USER";}', NULL, NULL, '2018-01-16 18:41:33', '2018-01-17 18:16:37');
+	(22, 22, 'juliohernandezs@gmail.com', 'juliohernandezs@gmail.com', 1, 'ql89y2h6eqs08w4gwckss8800s0cw0w', 'ERD3jsvzvWCy/SQ1eJscysfqEOdemkBlKEJ8fOvJRjzwegXCM924oFQrvTjepyc3Llz92ZETKKGDu1l2YlckcQ==', '2018-01-19 18:09:55', NULL, NULL, 'k~UC1rfU_re8UUvY', NULL, 0, NULL, NULL, 'a:1:{i:0;s:9:"ROLE_USER";}', NULL, NULL, '2018-01-16 18:41:33', '2018-01-19 18:09:55');
 /*!40000 ALTER TABLE `sylius_shop_user` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_taxon
@@ -1537,17 +1668,14 @@ CREATE TABLE IF NOT EXISTS `sylius_taxon` (
   CONSTRAINT `FK_CFD811CAA977936C` FOREIGN KEY (`tree_root`) REFERENCES `sylius_taxon` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_taxon: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_taxon: ~4 rows (aproximadamente)
 DELETE FROM `sylius_taxon`;
 /*!40000 ALTER TABLE `sylius_taxon` DISABLE KEYS */;
 INSERT INTO `sylius_taxon` (`id`, `tree_root`, `parent_id`, `code`, `tree_left`, `tree_right`, `tree_level`, `position`, `created_at`, `updated_at`) VALUES
-	(1, 1, NULL, 'category', 1, 14, 0, 0, '2018-01-16 18:26:05', '2018-01-16 18:26:05'),
-	(2, 1, 1, 'bugs', 2, 3, 1, 0, '2018-01-16 18:26:05', '2018-01-16 18:26:05'),
-	(3, 1, 1, 'stickers', 4, 5, 1, 1, '2018-01-16 18:26:06', '2018-01-16 18:26:06'),
-	(4, 1, 1, 'books', 6, 7, 1, 2, '2018-01-16 18:26:07', '2018-01-16 18:26:07'),
-	(5, 1, 1, 'cellphones', 8, 13, 1, 3, '2018-01-16 18:26:08', '2018-01-16 18:26:08'),
-	(6, 1, 5, 'feature_phones', 9, 10, 2, 0, '2018-01-16 18:26:08', '2018-01-16 18:26:08'),
-	(7, 1, 5, 'smartphones', 11, 12, 2, 1, '2018-01-16 18:26:08', '2018-01-16 18:26:08');
+	(1, 1, NULL, 'category', 1, 8, 0, 0, '2018-01-16 18:26:05', '2018-01-16 18:26:05'),
+	(5, 1, 1, 'cellphones', 2, 7, 1, 0, '2018-01-16 18:26:08', '2018-01-16 18:26:08'),
+	(6, 1, 5, 'feature_phones', 3, 4, 2, 0, '2018-01-16 18:26:08', '2018-01-16 18:26:08'),
+	(7, 1, 5, 'smartphones', 5, 6, 2, 1, '2018-01-16 18:26:08', '2018-01-16 18:26:08');
 /*!40000 ALTER TABLE `sylius_taxon` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_taxon_image
@@ -1581,22 +1709,20 @@ CREATE TABLE IF NOT EXISTS `sylius_taxon_translation` (
   UNIQUE KEY `sylius_taxon_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_1487DFCF2C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_1487DFCF2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_taxon` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_taxon_translation: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_taxon_translation: ~8 rows (aproximadamente)
 DELETE FROM `sylius_taxon_translation`;
 /*!40000 ALTER TABLE `sylius_taxon_translation` DISABLE KEYS */;
 INSERT INTO `sylius_taxon_translation` (`id`, `translatable_id`, `name`, `slug`, `description`, `locale`) VALUES
 	(1, 1, 'Category', 'category', 'Category', 'en_US'),
-	(2, 2, 'Mugs', 'mugs', 'Ipsum qui perspiciatis facere quo magni soluta facere. Quisquam voluptatem reprehenderit perferendis autem qui inventore vel at. Quia rerum cupiditate magnam aut similique optio asperiores. Quas et non qui voluptas vero laboriosam molestias.', 'en_US'),
-	(3, 3, 'Stickers', 'stickers', 'Ipsum qui et deleniti et autem sed. Eum est rerum quo similique odio. Quis iusto dolorum aliquam. Enim a fugit autem. In error eaque qui numquam qui ipsam.', 'en_US'),
-	(4, 4, 'Books', 'books', 'Et non minus et quae et et facilis placeat. Tempore eaque dolor perspiciatis aliquid. Ut quae necessitatibus facere eos.', 'en_US'),
 	(5, 5, 'Cellphones', 'cellphones', 'Teléfonos celulares inteligentes', 'en_US'),
-	(6, 6, 'Smartphones', 'cellphone/smartphones', 'Smartphones', 'en_US'),
-	(7, 7, 'Women', 't-shirts/women', 'Ipsa fugit et unde architecto. Molestiae qui vel possimus minus in incidunt. Blanditiis nesciunt distinctio at facere culpa rem. Non quam deleniti quasi aut harum.', 'en_US'),
+	(6, 6, 'Feature Phones', 'cellphones/feature-phone', 'Low-end mobile phones or limited features with respect to smart phones. They allow you to call or send text messages, take pictures, manage multimedia files, radio, and other functions.', 'en_US'),
+	(7, 7, 'Smartphones', 'cellphones/smartphone', 'Mobile phones with touch screen, large data capacity, multiple smart applications, Camera, Radio, Internet via WiFi or 3G or 4G networks, and many more features', 'en_US'),
 	(8, 5, 'Celulares', 'telefonos', 'Teléfonos celulares inteligentes', 'es_ES'),
-	(9, 6, 'Teléfono Inteligente', 'telefonos/telefono-inteligente', 'Teléfonos Inteligentes', 'es_ES'),
-	(10, 1, 'Categoria', 'categoria', 'Categoria', 'es_ES');
+	(9, 6, 'Teléfono Básico', 'telefonos/telefono-basico', 'Teléfonos móviles de baja gama o de características limitadas respecto a los teléfonos inteligentes. Te permiten llamar o enviar mensajes de texto, tomar fotografías, manejo archivos multimedia, radio, y otras funciones más.', 'es_ES'),
+	(10, 1, 'Categoria', 'categoria', 'Categoria', 'es_ES'),
+	(11, 7, 'Smartphones', 'telefonos/telefono-inteligente', 'Teléfonos móviles con pantalla táctil, gran capacidad de datos, multiples aplicaciones inteligentes, Cámara, Radio, Internet via WiFi o redes 3G o 4G, y muchas mas funcionalidades', 'es_ES');
 /*!40000 ALTER TABLE `sylius_taxon_translation` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_tax_category
@@ -1612,7 +1738,7 @@ CREATE TABLE IF NOT EXISTS `sylius_tax_category` (
   UNIQUE KEY `UNIQ_221EB0BE77153098` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_tax_category: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_tax_category: ~1 rows (aproximadamente)
 DELETE FROM `sylius_tax_category`;
 /*!40000 ALTER TABLE `sylius_tax_category` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sylius_tax_category` ENABLE KEYS */;
@@ -1638,7 +1764,7 @@ CREATE TABLE IF NOT EXISTS `sylius_tax_rate` (
   CONSTRAINT `FK_3CD86B2E9F2C3FAB` FOREIGN KEY (`zone_id`) REFERENCES `sylius_zone` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_tax_rate: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_tax_rate: ~1 rows (aproximadamente)
 DELETE FROM `sylius_tax_rate`;
 /*!40000 ALTER TABLE `sylius_tax_rate` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sylius_tax_rate` ENABLE KEYS */;
