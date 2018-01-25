@@ -1,0 +1,21 @@
+<script src="{{ asset(path) }}"></script>
+
+<script src="{{ asset('resources/js/owl.carousel.min.js') }}"></script>
+
+<script>
+	$(document).ready(function() {
+	 
+	  $("#owl-slider-home").owlCarousel({
+	    navigation : true, // Show next and prev buttons
+ 		lazyLoad:true,
+    	loop:true,
+    	autoplay:3000,
+      	items : 1,
+      	itemsDesktop : false,
+      	itemsDesktopSmall : false,
+      	itemsTablet: false,
+      	itemsMobile : false
+	  });
+	 
+	});
+</script>

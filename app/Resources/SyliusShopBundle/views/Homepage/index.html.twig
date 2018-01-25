@@ -1,0 +1,19 @@
+{% extends '@SyliusShop/layout.html.twig' %}
+
+{% block content %}
+
+<div id="owl-slider-home" class="owl-carousel owl-theme">
+ 
+  <div class="item"><img src="{{ asset('resources/img/4-5ELTE_EN.jpg') }}"></div>
+  <div class="item"><img src="{{ asset('resources/img/5ELTE_EN_SLider.jpg') }}"></div>
+  <div class="item"><img src="{{ asset('resources/img/5m_EN.jpg') }}"></div>
+
+</div>
+
+<h2 class="ui horizontal section divider header">
+    {{ 'sylius.ui.latest_products'|trans }}
+</h2>
+{{ render(url('sylius_shop_partial_product_index_latest', {'count': 4, 'template': '@SyliusShop/Product/_horizontalList.html.twig'})) }}
+
+{% endblock %}
+
