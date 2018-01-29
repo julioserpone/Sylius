@@ -15,5 +15,22 @@
 </h2>
 {{ render(url('sylius_shop_partial_product_index_latest', {'count': 4, 'template': '@SyliusShop/Product/_horizontalList.html.twig'})) }}
 
+<h2 class="ui horizontal section divider header">
+    {{ 'sylius.ui.promotions'|trans }}
+</h2>
+
+<div class="ui centered grid">
+  	<div class="ui equal width stackable grid">
+  		<div class="column">
+	    	<img class="ui medium spaced rounded image" src="{{ asset('resources/img/4e4_EN.jpg') }}">
+		</div>
+	  	<div class="column">
+	  		<img class="ui medium spaced rounded image" src="{{ asset('resources/img/G2_En.jpg') }}">
+		</div>
+	  	<div class="column">
+	  		<img class="ui medium spaced rounded image" src="{{ asset('resources/img/5ELTE_EN.jpg') }}">
+		</div>
+	</div>
+</div>
 {% endblock %}
 
