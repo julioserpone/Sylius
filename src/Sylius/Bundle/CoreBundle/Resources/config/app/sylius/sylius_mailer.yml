@@ -3,5 +3,5 @@
 
 sylius_mailer:
     sender:
-        name: Example.com
-        address: no-reply@example.com
+        name: "%env(SYLIUS_COMPANY_PAGE)%"
+        address: "%env(SYLIUS_MAILER_USER)%"

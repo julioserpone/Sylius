@@ -47,7 +47,12 @@ liip_imagine:
                 thumbnail: { size: [260, 260], mode: outbound }
         sylius_shop_product_large_thumbnail:
             filters:
-                thumbnail: { size: [550, 412], mode: outbound }
+                #thumbnail: { size: [550, 412], mode: outbound }
+                # use and setup the "scale" filter
+                scale:
+
+                    # given 1920x1600px -> output 960x800px (relative down-scale)
+                    to: 0.5
 
 sonata_block:
     default_contexts: ~
