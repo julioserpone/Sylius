@@ -7,6 +7,8 @@
 
 /web/*
 !/web/resources
+!/web/assets/shop/css/*
+!/web/assets/admin/css/*
 
 /bin/*
 !/bin/build-package

@@ -52,7 +52,10 @@ liip_imagine:
     filter_sets:
         sylius_small:
             filters:
-                thumbnail: { size: [120, 90], mode: outbound }
+                scale:
+                    to: 0.5
+                thumbnail: { size: [150, 112], mode: inset }
+                #thumbnail: { size: [120, 90], mode: outbound }
         sylius_medium:
             filters:
                 thumbnail: { size: [240, 180], mode: outbound }
