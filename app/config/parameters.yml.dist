@@ -35,3 +35,5 @@ parameters:
     env(SYLIUS_MAILER_AUTHMODE): oauth
 
     env(SYLIUS_SECRET): EDITME
+
+    env(SYLIUS_COMPANY_PAGE): page.test

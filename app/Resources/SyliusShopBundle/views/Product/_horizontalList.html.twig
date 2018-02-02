@@ -1,0 +1,14 @@
+<!--<div class="ui four column stackable grid">-->
+<div class="ui equal width stackable grid">
+    <div class="equal width row">
+        {% for product in products %}
+        <div class="column">
+            {% include '@SyliusShop/Product/_box.html.twig' %}
+        </div>
+            {% if 0 == loop.index % 4 %}
+        </div>
+        <div class="equal width row">
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
