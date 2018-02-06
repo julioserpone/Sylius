@@ -162,8 +162,8 @@ sylius:
             intl: Intl
             json_encode: JSON
             mbstring: Multibyte String
-            "off": false
-            "on": true
+            off: false
+            on: true
             pcre: PCRE
             pdo: PDO
             php_xml: PHP-XML
@@ -174,16 +174,16 @@ sylius:
             header: file system
             cache:
                 header: cache
-                help: 'Pentru a seta permisiunile execută: sudo setfacl -R -m u:www-date: rwX -m u: ''whoami'': rwX %path% && sudo setfacl -dR -m u:www-date: rwx -m u: ''whoami'': rwx %path%'
+                help: "Pentru a seta permisiunile execută: sudo setfacl -R -m u:www-date: rwX -m u: 'whoami': rwX %path% && sudo setfacl -dR -m u:www-date: rwx -m u: 'whoami': rwx %path%"
             exists: există
             logs:
                 header: logs
-                help: 'Pentru a seta permisiunile execută: sudo setfacl -R -m u:www-date: rwX -m u: ''whoami'': rwX %path% && sudo setfacl -dR -m u:www-date: rwx -m u: ''whoami'': rwx %path%'
+                help: "Pentru a seta permisiunile execută: sudo setfacl -R -m u:www-date: rwX -m u: 'whoami': rwX %path% && sudo setfacl -dR -m u:www-date: rwx -m u: 'whoami': rwx %path%"
             not_exists: nu există
             not_writable: nu sunt drepturi de scriere
             parameters:
                 header: parameters.yml
-                help: 'Pentru a seta permisiunile executa: sudo chmod o + w %path%'
+                help: "Pentru a seta permisiunile executa: sudo chmod o + w %path%"
             vendors: vendors
             writable: are drepturi de scriere
         settings:
@@ -192,8 +192,8 @@ sylius:
             detect_unicode: detect_unicode
             magic_quotes_gpc: magic_quotes_gpc
             non_deprecated: nu este deprecat
-            "off": false
-            "on": true
+            off: false
+            on: true
             register_globals: register_globals
             session:
                 auto_start: session.auto_start

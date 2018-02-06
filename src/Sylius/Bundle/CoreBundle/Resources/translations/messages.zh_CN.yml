@@ -162,8 +162,8 @@ sylius:
             intl: Intl
             json_encode: JSON
             mbstring: 多字节字符串
-            "off": false
-            "on": true
+            off: false
+            on: true
             pcre: PCRE
             pdo: PDO
             php_xml: PHP XML
@@ -174,16 +174,16 @@ sylius:
             header: 文件系统
             cache:
                 header: 缓存
-                help: 设置权限运行： sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%
+                help: "设置权限运行： sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%"
             exists: 存在
             logs:
                 header: 日志
-                help: 设置权限运行： sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%
+                help: "设置权限运行： sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX %path% && sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx %path%"
             not_exists: 不存在
             not_writable: 不可写
             parameters:
                 header: parameters.yml
-                help: 设置权限运行： sudo chmod a+w %path%
+                help: "设置权限运行： sudo chmod a+w %path%"
             vendors: 供应商
             writable: 可写
         settings:
@@ -192,8 +192,8 @@ sylius:
             detect_unicode: detect_unicode
             magic_quotes_gpc: magic_quotes_gpc
             non_deprecated: 非弃用
-            "off": false
-            "on": true
+            off: false
+            on: true
             register_globals: 注册的全局变量
             session:
                 auto_start: session.auto_start
