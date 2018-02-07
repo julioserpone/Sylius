@@ -36,9 +36,9 @@ CREATE TABLE IF NOT EXISTS `sylius_address` (
   PRIMARY KEY (`id`),
   KEY `IDX_B97FF0589395C3F3` (`customer_id`),
   CONSTRAINT `FK_B97FF0589395C3F3` FOREIGN KEY (`customer_id`) REFERENCES `sylius_customer` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_address: ~18 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_address: ~22 rows (aproximadamente)
 DELETE FROM `sylius_address`;
 /*!40000 ALTER TABLE `sylius_address` DISABLE KEYS */;
 INSERT INTO `sylius_address` (`id`, `customer_id`, `first_name`, `last_name`, `phone_number`, `street`, `company`, `city`, `postcode`, `created_at`, `updated_at`, `country_code`, `province_code`, `province_name`) VALUES
@@ -59,7 +59,11 @@ INSERT INTO `sylius_address` (`id`, `customer_id`, `first_name`, `last_name`, `p
 	(19, NULL, 'JULIO', 'HERNANDEZ', '847-320-5796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-17 18:18:50', '2018-01-17 18:18:51', 'US', NULL, 'Illinois'),
 	(20, NULL, 'JULIO', 'HERNANDEZ', '847-320-5796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-31 13:58:51', '2018-01-31 13:58:54', 'US', NULL, 'Illinois'),
 	(21, NULL, 'JULIO', 'HERNANDEZ', '8473205796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-29 16:36:56', '2018-01-29 16:36:56', 'US', NULL, 'Illinois'),
-	(22, NULL, 'JULIO', 'HERNANDEZ', '8473205796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-31 14:45:04', '2018-01-31 14:45:04', 'US', NULL, 'Illinois');
+	(22, NULL, 'JULIO', 'HERNANDEZ', '8473205796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-31 14:45:04', '2018-01-31 14:45:04', 'US', NULL, 'Illinois'),
+	(23, NULL, 'JULIO', 'HERNANDEZ', '8473205796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-29 16:36:56', '2018-01-29 16:36:56', 'US', NULL, 'Illinois'),
+	(24, NULL, 'JULIO', 'HERNANDEZ', '8473205796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-02-06 13:46:45', '2018-02-06 13:46:46', 'US', NULL, 'Illinois'),
+	(25, NULL, 'JULIO', 'HERNANDEZ', '8473205796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-01-29 16:36:56', '2018-01-29 16:36:56', 'US', NULL, 'Illinois'),
+	(26, NULL, 'JULIO', 'HERNANDEZ', '8473205796', '2632 Dovetail Drive', NULL, 'Bensenville', '60106', '2018-02-06 14:44:57', '2018-02-06 14:44:58', 'US', NULL, 'Illinois');
 /*!40000 ALTER TABLE `sylius_address` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_address_log_entries
@@ -74,9 +78,9 @@ CREATE TABLE IF NOT EXISTS `sylius_address_log_entries` (
   `data` longtext COLLATE utf8_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
   `username` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_address_log_entries: ~22 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_address_log_entries: ~18 rows (aproximadamente)
 DELETE FROM `sylius_address_log_entries`;
 /*!40000 ALTER TABLE `sylius_address_log_entries` DISABLE KEYS */;
 INSERT INTO `sylius_address_log_entries` (`id`, `action`, `logged_at`, `object_id`, `object_class`, `version`, `data`, `username`) VALUES
@@ -101,7 +105,11 @@ INSERT INTO `sylius_address_log_entries` (`id`, `action`, `logged_at`, `object_i
 	(21, 'create', '2018-01-29 16:50:40', '19', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:12:"847-320-5796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
 	(22, 'create', '2018-01-31 13:58:54', '20', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:12:"847-320-5796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
 	(23, 'create', '2018-01-31 14:44:54', '21', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:10:"8473205796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
-	(24, 'create', '2018-01-31 14:45:04', '22', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:10:"8473205796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com');
+	(24, 'create', '2018-01-31 14:45:04', '22', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:10:"8473205796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
+	(25, 'create', '2018-02-06 13:43:37', '23', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:10:"8473205796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
+	(26, 'create', '2018-02-06 13:46:46', '24', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:10:"8473205796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
+	(27, 'create', '2018-02-06 14:43:52', '25', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:10:"8473205796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com'),
+	(28, 'create', '2018-02-06 14:44:58', '26', 'Sylius\\Component\\Core\\Model\\Address', 1, 'a:10:{s:9:"firstName";s:5:"JULIO";s:8:"lastName";s:9:"HERNANDEZ";s:11:"phoneNumber";s:10:"8473205796";s:6:"street";s:19:"2632 Dovetail Drive";s:7:"company";N;s:4:"city";s:11:"Bensenville";s:8:"postcode";s:5:"60106";s:11:"countryCode";s:2:"US";s:12:"provinceCode";N;s:12:"provinceName";s:8:"Illinois";}', 'juliohernandezs@gmail.com');
 /*!40000 ALTER TABLE `sylius_address_log_entries` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_adjustment
@@ -303,7 +311,7 @@ CREATE TABLE IF NOT EXISTS `sylius_channel_currencies` (
   CONSTRAINT `FK_AE491F9372F5A1AA` FOREIGN KEY (`channel_id`) REFERENCES `sylius_channel` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_channel_currencies: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_channel_currencies: ~0 rows (aproximadamente)
 DELETE FROM `sylius_channel_currencies`;
 /*!40000 ALTER TABLE `sylius_channel_currencies` DISABLE KEYS */;
 INSERT INTO `sylius_channel_currencies` (`channel_id`, `currency_id`) VALUES
@@ -342,7 +350,7 @@ CREATE TABLE IF NOT EXISTS `sylius_channel_pricing` (
   UNIQUE KEY `product_variant_channel_idx` (`product_variant_id`,`channel_code`),
   KEY `IDX_7801820CA80EF684` (`product_variant_id`),
   CONSTRAINT `FK_7801820CA80EF684` FOREIGN KEY (`product_variant_id`) REFERENCES `sylius_product_variant` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=345 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=347 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Volcando datos para la tabla yezzstore.sylius_channel_pricing: ~12 rows (aproximadamente)
 DELETE FROM `sylius_channel_pricing`;
@@ -359,7 +367,9 @@ INSERT INTO `sylius_channel_pricing` (`id`, `product_variant_id`, `price`, `chan
 	(341, 341, 3000, 'US_WEB', 3000),
 	(342, 342, 3000, 'US_WEB', 3000),
 	(343, 343, 3000, 'US_WEB', 3000),
-	(344, 344, 3000, 'US_WEB', 3000);
+	(344, 344, 3000, 'US_WEB', 3000),
+	(345, 345, 4790, 'US_WEB', 4500),
+	(346, 346, 4790, 'US_WEB', 4500);
 /*!40000 ALTER TABLE `sylius_channel_pricing` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_country
@@ -373,7 +383,7 @@ CREATE TABLE IF NOT EXISTS `sylius_country` (
   KEY `IDX_E74256BF77153098` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_country: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_country: ~0 rows (aproximadamente)
 DELETE FROM `sylius_country`;
 /*!40000 ALTER TABLE `sylius_country` DISABLE KEYS */;
 INSERT INTO `sylius_country` (`id`, `code`, `enabled`) VALUES
@@ -391,7 +401,7 @@ CREATE TABLE IF NOT EXISTS `sylius_currency` (
   UNIQUE KEY `UNIQ_96EDD3D077153098` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_currency: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_currency: ~0 rows (aproximadamente)
 DELETE FROM `sylius_currency`;
 /*!40000 ALTER TABLE `sylius_currency` DISABLE KEYS */;
 INSERT INTO `sylius_currency` (`id`, `code`, `created_at`, `updated_at`) VALUES
@@ -423,7 +433,7 @@ CREATE TABLE IF NOT EXISTS `sylius_customer` (
   CONSTRAINT `FK_7E82D5E6D2919A68` FOREIGN KEY (`customer_group_id`) REFERENCES `sylius_customer_group` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_customer: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_customer: ~2 rows (aproximadamente)
 DELETE FROM `sylius_customer`;
 /*!40000 ALTER TABLE `sylius_customer` DISABLE KEYS */;
 INSERT INTO `sylius_customer` (`id`, `customer_group_id`, `default_address_id`, `email`, `email_canonical`, `first_name`, `last_name`, `birthday`, `gender`, `created_at`, `updated_at`, `phone_number`, `subscribed_to_newsletter`) VALUES
@@ -482,7 +492,7 @@ CREATE TABLE IF NOT EXISTS `sylius_gateway_config` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_gateway_config: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_gateway_config: ~2 rows (aproximadamente)
 DELETE FROM `sylius_gateway_config`;
 /*!40000 ALTER TABLE `sylius_gateway_config` DISABLE KEYS */;
 INSERT INTO `sylius_gateway_config` (`id`, `config`, `gateway_name`, `factory_name`) VALUES
@@ -600,9 +610,9 @@ CREATE TABLE IF NOT EXISTS `sylius_order` (
   CONSTRAINT `FK_6196A1F972F5A1AA` FOREIGN KEY (`channel_id`) REFERENCES `sylius_channel` (`id`),
   CONSTRAINT `FK_6196A1F979D0C0E4` FOREIGN KEY (`billing_address_id`) REFERENCES `sylius_address` (`id`),
   CONSTRAINT `FK_6196A1F99395C3F3` FOREIGN KEY (`customer_id`) REFERENCES `sylius_customer` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_order: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_order: ~9 rows (aproximadamente)
 DELETE FROM `sylius_order`;
 /*!40000 ALTER TABLE `sylius_order` DISABLE KEYS */;
 INSERT INTO `sylius_order` (`id`, `shipping_address_id`, `billing_address_id`, `channel_id`, `promotion_coupon_id`, `customer_id`, `number`, `notes`, `state`, `checkout_completed_at`, `items_total`, `adjustments_total`, `total`, `created_at`, `updated_at`, `currency_code`, `locale_code`, `checkout_state`, `payment_state`, `shipping_state`, `token_value`, `customer_ip`) VALUES
@@ -612,7 +622,9 @@ INSERT INTO `sylius_order` (`id`, `shipping_address_id`, `billing_address_id`, `
 	(6, 14, 15, 1, NULL, 22, '000000006', NULL, 'fulfilled', '2018-01-22 18:48:31', 5400, 0, 5400, '2018-01-22 18:37:26', '2018-01-25 17:19:50', 'USD', 'es_ES', 'completed', 'paid', 'shipped', 'A-SQWMTvhX', '::1'),
 	(7, 16, 17, 1, NULL, 22, '000000007', NULL, 'fulfilled', '2018-01-29 16:37:32', 3900, 0, 3900, '2018-01-29 16:29:52', '2018-01-29 16:39:31', 'USD', 'en_US', 'completed', 'paid', 'shipped', 'lfKmytdAUD', '::1'),
 	(8, 19, 20, 1, NULL, 22, '000000008', NULL, 'fulfilled', '2018-01-31 14:17:07', 3950, 0, 3950, '2018-01-29 16:50:40', '2018-01-31 14:18:53', 'USD', 'en_US', 'completed', 'paid', 'shipped', '3t8v5Vi_3l', '::1'),
-	(9, 21, 22, 1, NULL, 22, '000000009', NULL, 'fulfilled', '2018-01-31 14:45:15', 3800, 0, 3800, '2018-01-31 14:44:54', '2018-01-31 14:51:07', 'USD', 'en_US', 'completed', 'paid', 'shipped', 'GkBdXAalp_', '::1');
+	(9, 21, 22, 1, NULL, 22, '000000009', NULL, 'fulfilled', '2018-01-31 14:45:15', 3800, 0, 3800, '2018-01-31 14:44:54', '2018-01-31 14:51:07', 'USD', 'en_US', 'completed', 'paid', 'shipped', 'GkBdXAalp_', '::1'),
+	(10, 23, 24, 1, NULL, 22, '000000010', NULL, 'fulfilled', '2018-02-06 13:46:59', 4790, 0, 4790, '2018-02-06 13:43:35', '2018-02-06 13:51:33', 'USD', 'en_US', 'completed', 'paid', 'shipped', 'sk7SEqfJcf', '::1'),
+	(12, 25, 26, 1, NULL, 22, '000000011', NULL, 'fulfilled', '2018-02-06 14:45:20', 4790, 0, 4790, '2018-02-06 14:43:52', '2018-02-06 15:12:39', 'USD', 'en_US', 'completed', 'paid', 'shipped', 'FuLAIxeMsa', '::1');
 /*!40000 ALTER TABLE `sylius_order` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_order_item
@@ -634,9 +646,9 @@ CREATE TABLE IF NOT EXISTS `sylius_order_item` (
   KEY `IDX_77B587ED3B69A9AF` (`variant_id`),
   CONSTRAINT `FK_77B587ED3B69A9AF` FOREIGN KEY (`variant_id`) REFERENCES `sylius_product_variant` (`id`),
   CONSTRAINT `FK_77B587ED8D9F6D38` FOREIGN KEY (`order_id`) REFERENCES `sylius_order` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_order_item: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_order_item: ~8 rows (aproximadamente)
 DELETE FROM `sylius_order_item`;
 /*!40000 ALTER TABLE `sylius_order_item` DISABLE KEYS */;
 INSERT INTO `sylius_order_item` (`id`, `order_id`, `variant_id`, `quantity`, `unit_price`, `units_total`, `adjustments_total`, `total`, `is_immutable`, `product_name`, `variant_name`) VALUES
@@ -646,7 +658,9 @@ INSERT INTO `sylius_order_item` (`id`, `order_id`, `variant_id`, `quantity`, `un
 	(13, 6, 337, 1, 5400, 5400, 0, 5400, 0, 'Yezz 5.5M', NULL),
 	(14, 7, 333, 1, 3900, 3900, 0, 3900, 0, 'Yezz 4E4', 'Yezz 4E4'),
 	(15, 8, 334, 1, 3950, 3950, 0, 3950, 0, 'Yezz 4E4', 'Yezz 4E4'),
-	(16, 9, 335, 1, 3800, 3800, 0, 3800, 0, 'Yezz 4E4', 'Yezz 4E4');
+	(16, 9, 335, 1, 3800, 3800, 0, 3800, 0, 'Yezz 4E4', 'Yezz 4E4'),
+	(18, 10, 345, 1, 4790, 4790, 0, 4790, 0, 'Yezz 5E LTE', 'Yezz 5E LTE'),
+	(20, 12, 346, 1, 4790, 4790, 0, 4790, 0, 'Yezz 5E LTE', 'Yezz 5E LTE');
 /*!40000 ALTER TABLE `sylius_order_item` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_order_item_unit
@@ -663,9 +677,9 @@ CREATE TABLE IF NOT EXISTS `sylius_order_item_unit` (
   KEY `IDX_82BF226E7BE036FC` (`shipment_id`),
   CONSTRAINT `FK_82BF226E7BE036FC` FOREIGN KEY (`shipment_id`) REFERENCES `sylius_shipment` (`id`) ON DELETE SET NULL,
   CONSTRAINT `FK_82BF226EE415FB15` FOREIGN KEY (`order_item_id`) REFERENCES `sylius_order_item` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=180 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=184 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_order_item_unit: ~7 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_order_item_unit: ~8 rows (aproximadamente)
 DELETE FROM `sylius_order_item_unit`;
 /*!40000 ALTER TABLE `sylius_order_item_unit` DISABLE KEYS */;
 INSERT INTO `sylius_order_item_unit` (`id`, `order_item_id`, `shipment_id`, `adjustments_total`, `created_at`, `updated_at`) VALUES
@@ -675,7 +689,9 @@ INSERT INTO `sylius_order_item_unit` (`id`, `order_item_id`, `shipment_id`, `adj
 	(176, 13, NULL, 0, '2018-01-22 18:46:12', '2018-01-22 18:46:12'),
 	(177, 14, NULL, 0, '2018-01-29 16:29:52', '2018-01-29 16:29:54'),
 	(178, 15, NULL, 0, '2018-01-29 16:50:40', '2018-01-29 16:50:40'),
-	(179, 16, NULL, 0, '2018-01-31 14:44:54', '2018-01-31 14:44:54');
+	(179, 16, NULL, 0, '2018-01-31 14:44:54', '2018-01-31 14:44:54'),
+	(181, 18, NULL, 0, '2018-02-06 13:46:00', '2018-02-06 13:46:01'),
+	(183, 20, NULL, 0, '2018-02-06 14:43:52', '2018-02-06 14:43:52');
 /*!40000 ALTER TABLE `sylius_order_item_unit` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_order_sequence
@@ -687,11 +703,11 @@ CREATE TABLE IF NOT EXISTS `sylius_order_sequence` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_order_sequence: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_order_sequence: ~0 rows (aproximadamente)
 DELETE FROM `sylius_order_sequence`;
 /*!40000 ALTER TABLE `sylius_order_sequence` DISABLE KEYS */;
 INSERT INTO `sylius_order_sequence` (`id`, `idx`, `version`) VALUES
-	(1, 9, 9);
+	(1, 11, 11);
 /*!40000 ALTER TABLE `sylius_order_sequence` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_payment
@@ -711,9 +727,9 @@ CREATE TABLE IF NOT EXISTS `sylius_payment` (
   KEY `IDX_D9191BD48D9F6D38` (`order_id`),
   CONSTRAINT `FK_D9191BD419883967` FOREIGN KEY (`method_id`) REFERENCES `sylius_payment_method` (`id`),
   CONSTRAINT `FK_D9191BD48D9F6D38` FOREIGN KEY (`order_id`) REFERENCES `sylius_order` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_payment: ~9 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_payment: ~11 rows (aproximadamente)
 DELETE FROM `sylius_payment`;
 /*!40000 ALTER TABLE `sylius_payment` DISABLE KEYS */;
 INSERT INTO `sylius_payment` (`id`, `method_id`, `order_id`, `currency_code`, `amount`, `state`, `details`, `created_at`, `updated_at`) VALUES
@@ -725,7 +741,11 @@ INSERT INTO `sylius_payment` (`id`, `method_id`, `order_id`, `currency_code`, `a
 	(14, 3, 6, 'USD', 5400, 'completed', '{"amount":5400,"currency":"usd","description":"Payment contains 1 item for a total of 54","card":"tok_1BoEO4LUl7ss7KjuPeESqZdS","id":"ch_1BoEO8LUl7ss7KjuzlX6Q5sc","object":"charge","amount_refunded":0,"application":null,"application_fee":null,"balance_transaction":"txn_1BoEO9LUl7ss7KjuFqpaVQth","captured":true,"created":1516900788,"customer":null,"destination":null,"dispute":null,"failure_code":null,"failure_message":null,"fraud_details":[],"invoice":null,"livemode":false,"metadata":[],"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","seller_message":"Payment complete.","type":"authorized"},"paid":true,"receipt_email":null,"receipt_number":null,"refunded":false,"refunds":{"object":"list","data":[],"has_more":false,"total_count":0,"url":"\\/v1\\/charges\\/ch_1BoEO8LUl7ss7KjuzlX6Q5sc\\/refunds"},"review":null,"shipping":null,"source":{"id":"card_1BoEO4LUl7ss7KjuHTC2YROV","object":"card","address_city":null,"address_country":null,"address_line1":null,"address_line1_check":null,"address_line2":null,"address_state":null,"address_zip":null,"address_zip_check":null,"brand":"Visa","country":"US","customer":null,"cvc_check":"pass","dynamic_last4":null,"exp_month":10,"exp_year":2023,"fingerprint":"uoE9PSmF1K2QvwQ6","funding":"credit","last4":"4242","metadata":[],"name":"juliohernandezs@gmail.com","tokenization_method":null},"source_transfer":null,"statement_descriptor":null,"status":"succeeded","transfer_group":null}', '2018-01-22 19:01:58', '2018-01-25 17:19:50'),
 	(15, 3, 7, 'USD', 3900, 'completed', '{"amount":3900,"currency":"usd","description":"Payment contains 1 item for a total of 39","card":"tok_1BpffFLUl7ss7KjuzpXqiyxh","id":"ch_1BpffJLUl7ss7KjuFDn72A01","object":"charge","amount_refunded":0,"application":null,"application_fee":null,"balance_transaction":"txn_1BpffKLUl7ss7Kju8T0Ti9sd","captured":true,"created":1517243969,"customer":null,"destination":null,"dispute":null,"failure_code":null,"failure_message":null,"fraud_details":[],"invoice":null,"livemode":false,"metadata":[],"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","seller_message":"Payment complete.","type":"authorized"},"paid":true,"receipt_email":null,"receipt_number":null,"refunded":false,"refunds":{"object":"list","data":[],"has_more":false,"total_count":0,"url":"\\/v1\\/charges\\/ch_1BpffJLUl7ss7KjuFDn72A01\\/refunds"},"review":null,"shipping":null,"source":{"id":"card_1BpffFLUl7ss7KjuwYSsLPyl","object":"card","address_city":null,"address_country":null,"address_line1":null,"address_line1_check":null,"address_line2":null,"address_state":null,"address_zip":null,"address_zip_check":null,"brand":"Visa","country":"US","customer":null,"cvc_check":"pass","dynamic_last4":null,"exp_month":1,"exp_year":2021,"fingerprint":"uoE9PSmF1K2QvwQ6","funding":"credit","last4":"4242","metadata":[],"name":"juliohernandezs@gmail.com","tokenization_method":null},"source_transfer":null,"statement_descriptor":null,"status":"succeeded","transfer_group":null}', '2018-01-29 16:29:54', '2018-01-29 16:39:31'),
 	(16, 3, 8, 'USD', 3950, 'completed', '{"amount":3950,"currency":"usd","description":"Payment contains 1 item for a total of 39.5","card":"tok_1BqMQ7LUl7ss7KjuRxguCjDn","id":"ch_1BqMQGLUl7ss7Kjuvt4XZkCb","object":"charge","amount_refunded":0,"application":null,"application_fee":null,"balance_transaction":"txn_1BqMQGLUl7ss7KjueEWhwa5n","captured":true,"created":1517408328,"customer":null,"destination":null,"dispute":null,"failure_code":null,"failure_message":null,"fraud_details":[],"invoice":null,"livemode":false,"metadata":[],"on_behalf_of":null,"order":null,"outcome":{"network_status":"approved_by_network","reason":null,"risk_level":"normal","seller_message":"Payment complete.","type":"authorized"},"paid":true,"receipt_email":null,"receipt_number":null,"refunded":false,"refunds":{"object":"list","data":[],"has_more":false,"total_count":0,"url":"\\/v1\\/charges\\/ch_1BqMQGLUl7ss7Kjuvt4XZkCb\\/refunds"},"review":null,"shipping":null,"source":{"id":"card_1BqMQ7LUl7ss7Kju2z7qrBby","object":"card","address_city":null,"address_country":null,"address_line1":null,"address_line1_check":null,"address_line2":null,"address_state":null,"address_zip":null,"address_zip_check":null,"brand":"Visa","country":"US","customer":null,"cvc_check":"pass","dynamic_last4":null,"exp_month":12,"exp_year":2019,"fingerprint":"uoE9PSmF1K2QvwQ6","funding":"credit","last4":"4242","metadata":[],"name":"juliohernandezs@gmail.com","tokenization_method":null},"source_transfer":null,"statement_descriptor":null,"status":"succeeded","transfer_group":null}', '2018-01-29 16:50:40', '2018-01-31 14:18:53'),
-	(17, 4, 9, 'USD', 3800, 'completed', '{"PAYMENTREQUEST_0_INVNUM":"9-17","PAYMENTREQUEST_0_CURRENCYCODE":"USD","PAYMENTREQUEST_0_AMT":"38.00","PAYMENTREQUEST_0_ITEMAMT":"38.00","L_PAYMENTREQUEST_0_NAME0":"Yezz 4E4","L_PAYMENTREQUEST_0_AMT0":"38.00","L_PAYMENTREQUEST_0_QTY0":"1","PAYMENTREQUEST_0_PAYMENTACTION":"Sale","AUTHORIZE_TOKEN_USERACTION":"commit","RETURNURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/ri5Ccr5y2nam58i1OSjhrz6lDN4ced5xx-GmH42DpSw","CANCELURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/ri5Ccr5y2nam58i1OSjhrz6lDN4ced5xx-GmH42DpSw?cancelled=1","PAYMENTREQUEST_0_NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/qIYJmdpkCFhcN3CQDA-TylXtpFlUuGXNPKalB1T86sQ","TOKEN":"EC-6T7552325M0808716","TIMESTAMP":"2018-01-31T14:50:52Z","CORRELATIONID":"cea1a58467209","ACK":"Success","VERSION":"65.1","BUILD":"43109726","BILLINGAGREEMENTACCEPTEDSTATUS":"0","CHECKOUTSTATUS":"PaymentActionCompleted","CURRENCYCODE":"USD","AMT":"38.00","ITEMAMT":"38.00","SHIPPINGAMT":"0.00","HANDLINGAMT":"0.00","TAXAMT":"0.00","INVNUM":"9-17","NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/qIYJmdpkCFhcN3CQDA-TylXtpFlUuGXNPKalB1T86sQ","INSURANCEAMT":"0.00","SHIPDISCAMT":"0.00","L_NAME0":"Yezz 4E4","L_QTY0":"1","L_TAXAMT0":"0.00","L_AMT0":"38.00","L_ITEMWEIGHTVALUE0":"   0.00000","L_ITEMLENGTHVALUE0":"   0.00000","L_ITEMWIDTHVALUE0":"   0.00000","L_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUEST_0_SHIPPINGAMT":"0.00","PAYMENTREQUEST_0_HANDLINGAMT":"0.00","PAYMENTREQUEST_0_TAXAMT":"0.00","PAYMENTREQUEST_0_INSURANCEAMT":"0.00","PAYMENTREQUEST_0_SHIPDISCAMT":"0.00","PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED":"false","L_PAYMENTREQUEST_0_TAXAMT0":"0.00","L_PAYMENTREQUEST_0_ITEMWEIGHTVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMLENGTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMWIDTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUESTINFO_0_ERRORCODE":"0","EMAIL":"paypal_us-buyer@sayyezz.com","PAYERID":"AAFAHM9HXMRCU","PAYERSTATUS":"verified","FIRSTNAME":"test","LASTNAME":"buyer","COUNTRYCODE":"US","SHIPTONAME":"test buyer","SHIPTOSTREET":"1 Main St","SHIPTOCITY":"San Jose","SHIPTOSTATE":"CA","SHIPTOZIP":"95131","SHIPTOCOUNTRYCODE":"US","SHIPTOCOUNTRYNAME":"United States","ADDRESSSTATUS":"Confirmed","INSURANCEOPTIONOFFERED":"false","PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID":"paypal_us-facilitator@sayyezz.com","PAYMENTREQUEST_0_SHIPTONAME":"test buyer","PAYMENTREQUEST_0_SHIPTOSTREET":"1 Main St","PAYMENTREQUEST_0_SHIPTOCITY":"San Jose","PAYMENTREQUEST_0_SHIPTOSTATE":"CA","PAYMENTREQUEST_0_SHIPTOZIP":"95131","PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE":"US","PAYMENTREQUEST_0_SHIPTOCOUNTRYNAME":"United States","PAYMENTREQUEST_0_ADDRESSSTATUS":"Confirmed","SUCCESSPAGEREDIRECTREQUESTED":"false","INSURANCEOPTIONSELECTED":"false","SHIPPINGOPTIONISDEFAULT":"false","PAYMENTINFO_0_TRANSACTIONID":"17B509326X671822N","PAYMENTINFO_0_TRANSACTIONTYPE":"cart","PAYMENTINFO_0_PAYMENTTYPE":"instant","PAYMENTINFO_0_ORDERTIME":"2018-01-31T14:50:36Z","PAYMENTINFO_0_AMT":"38.00","PAYMENTINFO_0_FEEAMT":"1.40","PAYMENTINFO_0_TAXAMT":"0.00","PAYMENTINFO_0_CURRENCYCODE":"USD","PAYMENTINFO_0_PAYMENTSTATUS":"Completed","PAYMENTINFO_0_PENDINGREASON":"None","PAYMENTINFO_0_REASONCODE":"None","PAYMENTINFO_0_PROTECTIONELIGIBILITY":"Eligible","PAYMENTINFO_0_PROTECTIONELIGIBILITYTYPE":"ItemNotReceivedEligible,UnauthorizedPaymentEligible","PAYMENTINFO_0_SELLERPAYPALACCOUNTID":"paypal_us-facilitator@sayyezz.com","PAYMENTINFO_0_ERRORCODE":"0","PAYMENTINFO_0_ACK":"Success","TRANSACTIONID":"17B509326X671822N","PAYMENTREQUEST_0_TRANSACTIONID":"17B509326X671822N","PAYMENTREQUESTINFO_0_TRANSACTIONID":"17B509326X671822N","PAYMENTREQUEST_0_TRANSACTIONTYPE":"cart","PAYMENTREQUEST_0_PAYMENTTYPE":"instant","PAYMENTREQUEST_0_ORDERTIME":"2018-01-31T14:50:36Z","PAYMENTREQUEST_0_FEEAMT":"1.40","PAYMENTREQUEST_0_PAYMENTSTATUS":"Completed","PAYMENTREQUEST_0_PENDINGREASON":"None","PAYMENTREQUEST_0_REASONCODE":"None"}', '2018-01-31 14:44:54', '2018-01-31 14:51:07');
+	(17, 4, 9, 'USD', 3800, 'completed', '{"PAYMENTREQUEST_0_INVNUM":"9-17","PAYMENTREQUEST_0_CURRENCYCODE":"USD","PAYMENTREQUEST_0_AMT":"38.00","PAYMENTREQUEST_0_ITEMAMT":"38.00","L_PAYMENTREQUEST_0_NAME0":"Yezz 4E4","L_PAYMENTREQUEST_0_AMT0":"38.00","L_PAYMENTREQUEST_0_QTY0":"1","PAYMENTREQUEST_0_PAYMENTACTION":"Sale","AUTHORIZE_TOKEN_USERACTION":"commit","RETURNURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/ri5Ccr5y2nam58i1OSjhrz6lDN4ced5xx-GmH42DpSw","CANCELURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/ri5Ccr5y2nam58i1OSjhrz6lDN4ced5xx-GmH42DpSw?cancelled=1","PAYMENTREQUEST_0_NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/qIYJmdpkCFhcN3CQDA-TylXtpFlUuGXNPKalB1T86sQ","TOKEN":"EC-6T7552325M0808716","TIMESTAMP":"2018-01-31T14:50:52Z","CORRELATIONID":"cea1a58467209","ACK":"Success","VERSION":"65.1","BUILD":"43109726","BILLINGAGREEMENTACCEPTEDSTATUS":"0","CHECKOUTSTATUS":"PaymentActionCompleted","CURRENCYCODE":"USD","AMT":"38.00","ITEMAMT":"38.00","SHIPPINGAMT":"0.00","HANDLINGAMT":"0.00","TAXAMT":"0.00","INVNUM":"9-17","NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/qIYJmdpkCFhcN3CQDA-TylXtpFlUuGXNPKalB1T86sQ","INSURANCEAMT":"0.00","SHIPDISCAMT":"0.00","L_NAME0":"Yezz 4E4","L_QTY0":"1","L_TAXAMT0":"0.00","L_AMT0":"38.00","L_ITEMWEIGHTVALUE0":"   0.00000","L_ITEMLENGTHVALUE0":"   0.00000","L_ITEMWIDTHVALUE0":"   0.00000","L_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUEST_0_SHIPPINGAMT":"0.00","PAYMENTREQUEST_0_HANDLINGAMT":"0.00","PAYMENTREQUEST_0_TAXAMT":"0.00","PAYMENTREQUEST_0_INSURANCEAMT":"0.00","PAYMENTREQUEST_0_SHIPDISCAMT":"0.00","PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED":"false","L_PAYMENTREQUEST_0_TAXAMT0":"0.00","L_PAYMENTREQUEST_0_ITEMWEIGHTVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMLENGTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMWIDTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUESTINFO_0_ERRORCODE":"0","EMAIL":"paypal_us-buyer@sayyezz.com","PAYERID":"AAFAHM9HXMRCU","PAYERSTATUS":"verified","FIRSTNAME":"test","LASTNAME":"buyer","COUNTRYCODE":"US","SHIPTONAME":"test buyer","SHIPTOSTREET":"1 Main St","SHIPTOCITY":"San Jose","SHIPTOSTATE":"CA","SHIPTOZIP":"95131","SHIPTOCOUNTRYCODE":"US","SHIPTOCOUNTRYNAME":"United States","ADDRESSSTATUS":"Confirmed","INSURANCEOPTIONOFFERED":"false","PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID":"paypal_us-facilitator@sayyezz.com","PAYMENTREQUEST_0_SHIPTONAME":"test buyer","PAYMENTREQUEST_0_SHIPTOSTREET":"1 Main St","PAYMENTREQUEST_0_SHIPTOCITY":"San Jose","PAYMENTREQUEST_0_SHIPTOSTATE":"CA","PAYMENTREQUEST_0_SHIPTOZIP":"95131","PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE":"US","PAYMENTREQUEST_0_SHIPTOCOUNTRYNAME":"United States","PAYMENTREQUEST_0_ADDRESSSTATUS":"Confirmed","SUCCESSPAGEREDIRECTREQUESTED":"false","INSURANCEOPTIONSELECTED":"false","SHIPPINGOPTIONISDEFAULT":"false","PAYMENTINFO_0_TRANSACTIONID":"17B509326X671822N","PAYMENTINFO_0_TRANSACTIONTYPE":"cart","PAYMENTINFO_0_PAYMENTTYPE":"instant","PAYMENTINFO_0_ORDERTIME":"2018-01-31T14:50:36Z","PAYMENTINFO_0_AMT":"38.00","PAYMENTINFO_0_FEEAMT":"1.40","PAYMENTINFO_0_TAXAMT":"0.00","PAYMENTINFO_0_CURRENCYCODE":"USD","PAYMENTINFO_0_PAYMENTSTATUS":"Completed","PAYMENTINFO_0_PENDINGREASON":"None","PAYMENTINFO_0_REASONCODE":"None","PAYMENTINFO_0_PROTECTIONELIGIBILITY":"Eligible","PAYMENTINFO_0_PROTECTIONELIGIBILITYTYPE":"ItemNotReceivedEligible,UnauthorizedPaymentEligible","PAYMENTINFO_0_SELLERPAYPALACCOUNTID":"paypal_us-facilitator@sayyezz.com","PAYMENTINFO_0_ERRORCODE":"0","PAYMENTINFO_0_ACK":"Success","TRANSACTIONID":"17B509326X671822N","PAYMENTREQUEST_0_TRANSACTIONID":"17B509326X671822N","PAYMENTREQUESTINFO_0_TRANSACTIONID":"17B509326X671822N","PAYMENTREQUEST_0_TRANSACTIONTYPE":"cart","PAYMENTREQUEST_0_PAYMENTTYPE":"instant","PAYMENTREQUEST_0_ORDERTIME":"2018-01-31T14:50:36Z","PAYMENTREQUEST_0_FEEAMT":"1.40","PAYMENTREQUEST_0_PAYMENTSTATUS":"Completed","PAYMENTREQUEST_0_PENDINGREASON":"None","PAYMENTREQUEST_0_REASONCODE":"None"}', '2018-01-31 14:44:54', '2018-01-31 14:51:07'),
+	(19, 4, 10, 'USD', 4790, 'completed', '{"PAYMENTREQUEST_0_INVNUM":"10-19","PAYMENTREQUEST_0_CURRENCYCODE":"USD","PAYMENTREQUEST_0_AMT":"47.90","PAYMENTREQUEST_0_ITEMAMT":"47.90","L_PAYMENTREQUEST_0_NAME0":"Yezz 5E LTE","L_PAYMENTREQUEST_0_AMT0":"47.90","L_PAYMENTREQUEST_0_QTY0":"1","PAYMENTREQUEST_0_PAYMENTACTION":"Sale","AUTHORIZE_TOKEN_USERACTION":"commit","RETURNURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/biZMTzIFTQd8mZrvj36iTAlubbMfGuHSq7H_ihkcC8Q","CANCELURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/biZMTzIFTQd8mZrvj36iTAlubbMfGuHSq7H_ihkcC8Q?cancelled=1","PAYMENTREQUEST_0_NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/EjPY_z2gz0SzDWUDTxAVKLjkZAkYfFAnk39aSWFgV9o","TOKEN":"EC-226496183J4371721","TIMESTAMP":"2018-02-06T13:51:32Z","CORRELATIONID":"8437bb141d7","ACK":"Success","VERSION":"65.1","BUILD":"43477490","BILLINGAGREEMENTACCEPTEDSTATUS":"0","CHECKOUTSTATUS":"PaymentActionCompleted","CURRENCYCODE":"USD","AMT":"47.90","ITEMAMT":"47.90","SHIPPINGAMT":"0.00","HANDLINGAMT":"0.00","TAXAMT":"0.00","INVNUM":"10-19","NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/EjPY_z2gz0SzDWUDTxAVKLjkZAkYfFAnk39aSWFgV9o","INSURANCEAMT":"0.00","SHIPDISCAMT":"0.00","L_NAME0":"Yezz 5E LTE","L_QTY0":"1","L_TAXAMT0":"0.00","L_AMT0":"47.90","L_ITEMWEIGHTVALUE0":"   0.00000","L_ITEMLENGTHVALUE0":"   0.00000","L_ITEMWIDTHVALUE0":"   0.00000","L_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUEST_0_SHIPPINGAMT":"0.00","PAYMENTREQUEST_0_HANDLINGAMT":"0.00","PAYMENTREQUEST_0_TAXAMT":"0.00","PAYMENTREQUEST_0_INSURANCEAMT":"0.00","PAYMENTREQUEST_0_SHIPDISCAMT":"0.00","PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED":"false","L_PAYMENTREQUEST_0_TAXAMT0":"0.00","L_PAYMENTREQUEST_0_ITEMWEIGHTVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMLENGTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMWIDTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUESTINFO_0_ERRORCODE":"0","EMAIL":"paypal_us-buyer@sayyezz.com","PAYERID":"AAFAHM9HXMRCU","PAYERSTATUS":"verified","FIRSTNAME":"test","LASTNAME":"buyer","COUNTRYCODE":"US","SHIPTONAME":"test buyer","SHIPTOSTREET":"1 Main St","SHIPTOCITY":"San Jose","SHIPTOSTATE":"CA","SHIPTOZIP":"95131","SHIPTOCOUNTRYCODE":"US","SHIPTOCOUNTRYNAME":"United States","ADDRESSSTATUS":"Confirmed","INSURANCEOPTIONOFFERED":"false","PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID":"paypal_us-facilitator@sayyezz.com","PAYMENTREQUEST_0_SHIPTONAME":"test buyer","PAYMENTREQUEST_0_SHIPTOSTREET":"1 Main St","PAYMENTREQUEST_0_SHIPTOCITY":"San Jose","PAYMENTREQUEST_0_SHIPTOSTATE":"CA","PAYMENTREQUEST_0_SHIPTOZIP":"95131","PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE":"US","PAYMENTREQUEST_0_SHIPTOCOUNTRYNAME":"United States","PAYMENTREQUEST_0_ADDRESSSTATUS":"Confirmed","SUCCESSPAGEREDIRECTREQUESTED":"false","INSURANCEOPTIONSELECTED":"false","SHIPPINGOPTIONISDEFAULT":"false","PAYMENTINFO_0_TRANSACTIONID":"6M395005SE8512056","PAYMENTINFO_0_TRANSACTIONTYPE":"cart","PAYMENTINFO_0_PAYMENTTYPE":"instant","PAYMENTINFO_0_ORDERTIME":"2018-02-06T13:51:30Z","PAYMENTINFO_0_AMT":"47.90","PAYMENTINFO_0_FEEAMT":"1.69","PAYMENTINFO_0_TAXAMT":"0.00","PAYMENTINFO_0_CURRENCYCODE":"USD","PAYMENTINFO_0_PAYMENTSTATUS":"Completed","PAYMENTINFO_0_PENDINGREASON":"None","PAYMENTINFO_0_REASONCODE":"None","PAYMENTINFO_0_PROTECTIONELIGIBILITY":"Eligible","PAYMENTINFO_0_PROTECTIONELIGIBILITYTYPE":"ItemNotReceivedEligible,UnauthorizedPaymentEligible","PAYMENTINFO_0_SELLERPAYPALACCOUNTID":"paypal_us-facilitator@sayyezz.com","PAYMENTINFO_0_ERRORCODE":"0","PAYMENTINFO_0_ACK":"Success","TRANSACTIONID":"6M395005SE8512056","PAYMENTREQUEST_0_TRANSACTIONID":"6M395005SE8512056","PAYMENTREQUESTINFO_0_TRANSACTIONID":"6M395005SE8512056","PAYMENTREQUEST_0_TRANSACTIONTYPE":"cart","PAYMENTREQUEST_0_PAYMENTTYPE":"instant","PAYMENTREQUEST_0_ORDERTIME":"2018-02-06T13:51:30Z","PAYMENTREQUEST_0_FEEAMT":"1.69","PAYMENTREQUEST_0_PAYMENTSTATUS":"Completed","PAYMENTREQUEST_0_PENDINGREASON":"None","PAYMENTREQUEST_0_REASONCODE":"None"}', '2018-02-06 13:46:01', '2018-02-06 13:51:33'),
+	(21, 4, 12, 'USD', 4790, 'cancelled', '{"PAYMENTREQUEST_0_INVNUM":"12-21","PAYMENTREQUEST_0_CURRENCYCODE":"USD","PAYMENTREQUEST_0_AMT":"47.90","PAYMENTREQUEST_0_ITEMAMT":"47.90","L_PAYMENTREQUEST_0_NAME0":"Yezz 5E LTE","L_PAYMENTREQUEST_0_AMT0":"47.90","L_PAYMENTREQUEST_0_QTY0":"1","PAYMENTREQUEST_0_PAYMENTACTION":"Sale","AUTHORIZE_TOKEN_USERACTION":"commit","RETURNURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/Xv0QXfUWnaZywJlCNksw-fNN3OWTy__O64_evdIG4Us","CANCELURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/Xv0QXfUWnaZywJlCNksw-fNN3OWTy__O64_evdIG4Us?cancelled=1","PAYMENTREQUEST_0_NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/YYh5RdnBDimnm7TIvcQe5IuHtIbwIZHtD64HsUBntsg","TOKEN":"EC-6AT80191WX1242435","TIMESTAMP":"2018-02-06T14:45:35Z","CORRELATIONID":"ebc4258659755","ACK":"Success","VERSION":"65.1","BUILD":"43477490","BILLINGAGREEMENTACCEPTEDSTATUS":"0","CHECKOUTSTATUS":"PaymentActionNotInitiated","CURRENCYCODE":"USD","AMT":"47.90","ITEMAMT":"47.90","SHIPPINGAMT":"0.00","HANDLINGAMT":"0.00","TAXAMT":"0.00","INVNUM":"12-21","NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/YYh5RdnBDimnm7TIvcQe5IuHtIbwIZHtD64HsUBntsg","INSURANCEAMT":"0.00","SHIPDISCAMT":"0.00","L_NAME0":"Yezz 5E LTE","L_QTY0":"1","L_TAXAMT0":"0.00","L_AMT0":"47.90","L_ITEMWEIGHTVALUE0":"   0.00000","L_ITEMLENGTHVALUE0":"   0.00000","L_ITEMWIDTHVALUE0":"   0.00000","L_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUEST_0_SHIPPINGAMT":"0.00","PAYMENTREQUEST_0_HANDLINGAMT":"0.00","PAYMENTREQUEST_0_TAXAMT":"0.00","PAYMENTREQUEST_0_INSURANCEAMT":"0.00","PAYMENTREQUEST_0_SHIPDISCAMT":"0.00","PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED":"false","L_PAYMENTREQUEST_0_TAXAMT0":"0.00","L_PAYMENTREQUEST_0_ITEMWEIGHTVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMLENGTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMWIDTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUESTINFO_0_ERRORCODE":"0","CANCELLED":true}', '2018-02-06 14:43:52', '2018-02-06 14:47:02'),
+	(22, 4, 12, 'USD', 4790, 'cancelled', '{"PAYMENTREQUEST_0_INVNUM":"12-22","PAYMENTREQUEST_0_CURRENCYCODE":"USD","PAYMENTREQUEST_0_AMT":"47.90","PAYMENTREQUEST_0_ITEMAMT":"47.90","L_PAYMENTREQUEST_0_NAME0":"Yezz 5E LTE","L_PAYMENTREQUEST_0_AMT0":"47.90","L_PAYMENTREQUEST_0_QTY0":"1","PAYMENTREQUEST_0_PAYMENTACTION":"Sale","AUTHORIZE_TOKEN_USERACTION":"commit","RETURNURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/1hdqUHsJdYB15UY5MHP6ul7tZ8ZYAE3ksDqdlZY8s50","CANCELURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/1hdqUHsJdYB15UY5MHP6ul7tZ8ZYAE3ksDqdlZY8s50?cancelled=1","PAYMENTREQUEST_0_NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/NQrMXV4FM41ZkNwhaG6jkMnVyQS0AtcMLPtPq1k8WCA","TOKEN":"EC-4H974083KW0457346","TIMESTAMP":"2018-02-06T14:47:13Z","CORRELATIONID":"1c9ec4d5e285b","ACK":"Success","VERSION":"65.1","BUILD":"43477490","BILLINGAGREEMENTACCEPTEDSTATUS":"0","CHECKOUTSTATUS":"PaymentActionNotInitiated","CURRENCYCODE":"USD","AMT":"47.90","ITEMAMT":"47.90","SHIPPINGAMT":"0.00","HANDLINGAMT":"0.00","TAXAMT":"0.00","INVNUM":"12-22","NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/NQrMXV4FM41ZkNwhaG6jkMnVyQS0AtcMLPtPq1k8WCA","INSURANCEAMT":"0.00","SHIPDISCAMT":"0.00","L_NAME0":"Yezz 5E LTE","L_QTY0":"1","L_TAXAMT0":"0.00","L_AMT0":"47.90","L_ITEMWEIGHTVALUE0":"   0.00000","L_ITEMLENGTHVALUE0":"   0.00000","L_ITEMWIDTHVALUE0":"   0.00000","L_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUEST_0_SHIPPINGAMT":"0.00","PAYMENTREQUEST_0_HANDLINGAMT":"0.00","PAYMENTREQUEST_0_TAXAMT":"0.00","PAYMENTREQUEST_0_INSURANCEAMT":"0.00","PAYMENTREQUEST_0_SHIPDISCAMT":"0.00","PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED":"false","L_PAYMENTREQUEST_0_TAXAMT0":"0.00","L_PAYMENTREQUEST_0_ITEMWEIGHTVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMLENGTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMWIDTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUESTINFO_0_ERRORCODE":"0","CANCELLED":true}', '2018-02-06 14:47:02', '2018-02-06 14:49:10'),
+	(23, 4, 12, 'USD', 4790, 'completed', '{"PAYMENTREQUEST_0_INVNUM":"12-23","PAYMENTREQUEST_0_CURRENCYCODE":"USD","PAYMENTREQUEST_0_AMT":"47.90","PAYMENTREQUEST_0_ITEMAMT":"47.90","L_PAYMENTREQUEST_0_NAME0":"Yezz 5E LTE","L_PAYMENTREQUEST_0_AMT0":"47.90","L_PAYMENTREQUEST_0_QTY0":"1","PAYMENTREQUEST_0_PAYMENTACTION":"Sale","AUTHORIZE_TOKEN_USERACTION":"commit","RETURNURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/_9YgBsltIui6iDph3ULOcXO2L3tp6aOT_KV0neq97-Y","CANCELURL":"http:\\/\\/yezzstore.test\\/payment\\/capture\\/_9YgBsltIui6iDph3ULOcXO2L3tp6aOT_KV0neq97-Y?cancelled=1","PAYMENTREQUEST_0_NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/uHHRhONFrV0EMi3kK5ospM8iRu0J0qu4eP5s6wBxgp0","TOKEN":"EC-6SR485815Y666621S","TIMESTAMP":"2018-02-06T15:12:37Z","CORRELATIONID":"f73fc299aad6e","ACK":"Success","VERSION":"65.1","BUILD":"43477490","BILLINGAGREEMENTACCEPTEDSTATUS":"0","CHECKOUTSTATUS":"PaymentActionCompleted","CURRENCYCODE":"USD","AMT":"47.90","ITEMAMT":"47.90","SHIPPINGAMT":"0.00","HANDLINGAMT":"0.00","TAXAMT":"0.00","INVNUM":"12-23","NOTIFYURL":"http:\\/\\/yezzstore.test\\/payment\\/notify\\/uHHRhONFrV0EMi3kK5ospM8iRu0J0qu4eP5s6wBxgp0","INSURANCEAMT":"0.00","SHIPDISCAMT":"0.00","L_NAME0":"Yezz 5E LTE","L_QTY0":"1","L_TAXAMT0":"0.00","L_AMT0":"47.90","L_ITEMWEIGHTVALUE0":"   0.00000","L_ITEMLENGTHVALUE0":"   0.00000","L_ITEMWIDTHVALUE0":"   0.00000","L_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUEST_0_SHIPPINGAMT":"0.00","PAYMENTREQUEST_0_HANDLINGAMT":"0.00","PAYMENTREQUEST_0_TAXAMT":"0.00","PAYMENTREQUEST_0_INSURANCEAMT":"0.00","PAYMENTREQUEST_0_SHIPDISCAMT":"0.00","PAYMENTREQUEST_0_INSURANCEOPTIONOFFERED":"false","L_PAYMENTREQUEST_0_TAXAMT0":"0.00","L_PAYMENTREQUEST_0_ITEMWEIGHTVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMLENGTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMWIDTHVALUE0":"   0.00000","L_PAYMENTREQUEST_0_ITEMHEIGHTVALUE0":"   0.00000","PAYMENTREQUESTINFO_0_ERRORCODE":"0","EMAIL":"paypal_us-buyer@sayyezz.com","PAYERID":"AAFAHM9HXMRCU","PAYERSTATUS":"verified","FIRSTNAME":"test","LASTNAME":"buyer","COUNTRYCODE":"US","SHIPTONAME":"test buyer","SHIPTOSTREET":"1 Main St","SHIPTOCITY":"San Jose","SHIPTOSTATE":"CA","SHIPTOZIP":"95131","SHIPTOCOUNTRYCODE":"US","SHIPTOCOUNTRYNAME":"United States","ADDRESSSTATUS":"Confirmed","INSURANCEOPTIONOFFERED":"false","PAYMENTREQUEST_0_SELLERPAYPALACCOUNTID":"paypal_us-facilitator@sayyezz.com","PAYMENTREQUEST_0_SHIPTONAME":"test buyer","PAYMENTREQUEST_0_SHIPTOSTREET":"1 Main St","PAYMENTREQUEST_0_SHIPTOCITY":"San Jose","PAYMENTREQUEST_0_SHIPTOSTATE":"CA","PAYMENTREQUEST_0_SHIPTOZIP":"95131","PAYMENTREQUEST_0_SHIPTOCOUNTRYCODE":"US","PAYMENTREQUEST_0_SHIPTOCOUNTRYNAME":"United States","PAYMENTREQUEST_0_ADDRESSSTATUS":"Confirmed","SUCCESSPAGEREDIRECTREQUESTED":"false","INSURANCEOPTIONSELECTED":"false","SHIPPINGOPTIONISDEFAULT":"false","PAYMENTINFO_0_TRANSACTIONID":"75U2671804475343Y","PAYMENTINFO_0_TRANSACTIONTYPE":"cart","PAYMENTINFO_0_PAYMENTTYPE":"instant","PAYMENTINFO_0_ORDERTIME":"2018-02-06T15:12:36Z","PAYMENTINFO_0_AMT":"47.90","PAYMENTINFO_0_FEEAMT":"1.69","PAYMENTINFO_0_TAXAMT":"0.00","PAYMENTINFO_0_CURRENCYCODE":"USD","PAYMENTINFO_0_PAYMENTSTATUS":"Completed","PAYMENTINFO_0_PENDINGREASON":"None","PAYMENTINFO_0_REASONCODE":"None","PAYMENTINFO_0_PROTECTIONELIGIBILITY":"Eligible","PAYMENTINFO_0_PROTECTIONELIGIBILITYTYPE":"ItemNotReceivedEligible,UnauthorizedPaymentEligible","PAYMENTINFO_0_SELLERPAYPALACCOUNTID":"paypal_us-facilitator@sayyezz.com","PAYMENTINFO_0_ERRORCODE":"0","PAYMENTINFO_0_ACK":"Success","TRANSACTIONID":"75U2671804475343Y","PAYMENTREQUEST_0_TRANSACTIONID":"75U2671804475343Y","PAYMENTREQUESTINFO_0_TRANSACTIONID":"75U2671804475343Y","PAYMENTREQUEST_0_TRANSACTIONTYPE":"cart","PAYMENTREQUEST_0_PAYMENTTYPE":"instant","PAYMENTREQUEST_0_ORDERTIME":"2018-02-06T15:12:36Z","PAYMENTREQUEST_0_FEEAMT":"1.69","PAYMENTREQUEST_0_PAYMENTSTATUS":"Completed","PAYMENTREQUEST_0_PENDINGREASON":"None","PAYMENTREQUEST_0_REASONCODE":"None"}', '2018-02-06 14:49:10', '2018-02-06 15:12:39');
 /*!40000 ALTER TABLE `sylius_payment` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_payment_method
@@ -745,7 +765,7 @@ CREATE TABLE IF NOT EXISTS `sylius_payment_method` (
   CONSTRAINT `FK_A75B0B0DF23D6140` FOREIGN KEY (`gateway_config_id`) REFERENCES `sylius_gateway_config` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_payment_method: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_payment_method: ~2 rows (aproximadamente)
 DELETE FROM `sylius_payment_method`;
 /*!40000 ALTER TABLE `sylius_payment_method` DISABLE KEYS */;
 INSERT INTO `sylius_payment_method` (`id`, `code`, `environment`, `is_enabled`, `position`, `created_at`, `updated_at`, `gateway_config_id`) VALUES
@@ -767,7 +787,7 @@ CREATE TABLE IF NOT EXISTS `sylius_payment_method_channels` (
   CONSTRAINT `FK_543AC0CC72F5A1AA` FOREIGN KEY (`channel_id`) REFERENCES `sylius_channel` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_payment_method_channels: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_payment_method_channels: ~2 rows (aproximadamente)
 DELETE FROM `sylius_payment_method_channels`;
 /*!40000 ALTER TABLE `sylius_payment_method_channels` DISABLE KEYS */;
 INSERT INTO `sylius_payment_method_channels` (`payment_method_id`, `channel_id`) VALUES
@@ -816,7 +836,7 @@ CREATE TABLE IF NOT EXISTS `sylius_payment_security_token` (
   PRIMARY KEY (`hash`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_payment_security_token: ~33 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_payment_security_token: ~37 rows (aproximadamente)
 DELETE FROM `sylius_payment_security_token`;
 /*!40000 ALTER TABLE `sylius_payment_security_token` DISABLE KEYS */;
 INSERT INTO `sylius_payment_security_token` (`hash`, `details`, `after_url`, `target_url`, `gateway_name`) VALUES
@@ -831,6 +851,7 @@ INSERT INTO `sylius_payment_security_token` (`hash`, `details`, `after_url`, `ta
 	('C5jSRmXgzIEASNzUJR5DmFSs01LjXZ-wz0XwFu_Rcr0', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/en_US/order/after-pay?payum_token=Ui3W9tcZsf0YZIAPFGFI6nk8qvEIozg4Sj3IWtE6JgY', 'http://yezzstore.test/payment/capture/C5jSRmXgzIEASNzUJR5DmFSs01LjXZ-wz0XwFu_Rcr0', 'stripe'),
 	('dyfsNdC8j1xpyU0l8Zj-Me7Zyq8J6fS0Xt6qa8kU77Y', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/en_US/order/after-pay?payum_token=dyfsNdC8j1xpyU0l8Zj-Me7Zyq8J6fS0Xt6qa8kU77Y', 'stripe'),
 	('E5KHzSUoab0Li0pypcoi3SxBTrAwWXs1gQcvOlajFEk', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/en_US/order/after-pay?payum_token=38bTPw7jHliB-MEfMdML36K6t-gKZTK5ZqLxPisuv6Y', 'http://yezzstore.test/payment/capture/E5KHzSUoab0Li0pypcoi3SxBTrAwWXs1gQcvOlajFEk', 'stripe'),
+	('EjPY_z2gz0SzDWUDTxAVKLjkZAkYfFAnk39aSWFgV9o', 'C:25:"Payum\\Core\\Model\\Identity":62:{a:2:{i:0;i:19;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/payment/notify/EjPY_z2gz0SzDWUDTxAVKLjkZAkYfFAnk39aSWFgV9o', 'paypal_express'),
 	('EY-V8ogRCyVguuWdkHEPO1GcT57P-2zUMsgmvTPQMds', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://localhost/yezzstore/web/en_US/order/after-pay?payum_token=UvOQ1yZZv-3NSk3FzwNUXG1hFygV7xjLRThcPWICa2k', 'http://localhost/yezzstore/web/payment/capture/EY-V8ogRCyVguuWdkHEPO1GcT57P-2zUMsgmvTPQMds', 'stripe'),
 	('GA42xNR437BFW2cPFlsZilDLdmj9Nb61ZXxcJUZg-8I', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:2;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/en_US/order/after-pay?payum_token=GA42xNR437BFW2cPFlsZilDLdmj9Nb61ZXxcJUZg-8I', 'stripe'),
 	('jMBHVGw7gdCwt8Uf6A89R469kHqigCJgdkfmUYM28zc', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/en_US/order/after-pay?payum_token=dyfsNdC8j1xpyU0l8Zj-Me7Zyq8J6fS0Xt6qa8kU77Y', 'http://yezzstore.test/payment/capture/jMBHVGw7gdCwt8Uf6A89R469kHqigCJgdkfmUYM28zc', 'stripe'),
@@ -840,6 +861,7 @@ INSERT INTO `sylius_payment_security_token` (`hash`, `details`, `after_url`, `ta
 	('nFTnH0csXbOZiwe3n4WY6QQQ9v3ekh2Nc72MdHV2C2s', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/en_US/order/after-pay?payum_token=nFTnH0csXbOZiwe3n4WY6QQQ9v3ekh2Nc72MdHV2C2s', 'stripe'),
 	('Nh-Mh1X5T352_ELYsZySK_T3eAQZmuMMbDzRY3KZbrY', 'C:25:"Payum\\Core\\Model\\Identity":62:{a:2:{i:0;i:14;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/es_ES/order/after-pay?payum_token=16Wq28_A5ct0Lx0r31OspamQ-0oe4N-_Hii-4fLLFgE', 'http://yezzstore.test/payment/capture/Nh-Mh1X5T352_ELYsZySK_T3eAQZmuMMbDzRY3KZbrY', 'stripe'),
 	('NPny1nbJaIk7-3hLfvyJYhe6e7aewGxJLJuPBtN9d40', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/en_US/order/after-pay?payum_token=NPny1nbJaIk7-3hLfvyJYhe6e7aewGxJLJuPBtN9d40', 'stripe'),
+	('NQrMXV4FM41ZkNwhaG6jkMnVyQS0AtcMLPtPq1k8WCA', 'C:25:"Payum\\Core\\Model\\Identity":62:{a:2:{i:0;i:22;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/payment/notify/NQrMXV4FM41ZkNwhaG6jkMnVyQS0AtcMLPtPq1k8WCA', 'paypal_express'),
 	('nVbIt7QDRMcS-3-7dEXuLjm4MQhUG0-_rZQsoT-9daI', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/es_ES/order/after-pay?payum_token=nVbIt7QDRMcS-3-7dEXuLjm4MQhUG0-_rZQsoT-9daI', 'Offline'),
 	('OUTPUpdEAS6HW_0oxszRRk9q1E1leKfkIzcHALOupBY', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/en_US/order/after-pay?payum_token=nFTnH0csXbOZiwe3n4WY6QQQ9v3ekh2Nc72MdHV2C2s', 'http://yezzstore.test/payment/capture/OUTPUpdEAS6HW_0oxszRRk9q1E1leKfkIzcHALOupBY', 'stripe'),
 	('P7o0knyfTZ9XkYsyprZddhFxC2UqmnXsniPMaOyp7TY', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/es_ES/order/after-pay?payum_token=P7o0knyfTZ9XkYsyprZddhFxC2UqmnXsniPMaOyp7TY', 'stripe'),
@@ -849,10 +871,12 @@ INSERT INTO `sylius_payment_security_token` (`hash`, `details`, `after_url`, `ta
 	('r-ibkH1LwPnZjS8TBw3VO6rOiWWEgke55L1_0-oDu40', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/es_ES/order/after-pay?payum_token=nVbIt7QDRMcS-3-7dEXuLjm4MQhUG0-_rZQsoT-9daI', 'http://yezzstore.test/payment/capture/r-ibkH1LwPnZjS8TBw3VO6rOiWWEgke55L1_0-oDu40', 'Offline'),
 	('SO6Jpk77aI7AEEwAjFWMqpPTm2lAPdqPiD2YvLmF7HM', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/es_ES/order/after-pay?payum_token=P7o0knyfTZ9XkYsyprZddhFxC2UqmnXsniPMaOyp7TY', 'http://yezzstore.test/payment/capture/SO6Jpk77aI7AEEwAjFWMqpPTm2lAPdqPiD2YvLmF7HM', 'stripe'),
 	('tXRMmYbMS3IHKDxu8ZLDSlCXjqLRWKRWZvBcxTMtQ1E', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:2;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/en_US/order/after-pay?payum_token=GA42xNR437BFW2cPFlsZilDLdmj9Nb61ZXxcJUZg-8I', 'http://yezzstore.test/payment/capture/tXRMmYbMS3IHKDxu8ZLDSlCXjqLRWKRWZvBcxTMtQ1E', 'stripe'),
+	('uHHRhONFrV0EMi3kK5ospM8iRu0J0qu4eP5s6wBxgp0', 'C:25:"Payum\\Core\\Model\\Identity":62:{a:2:{i:0;i:23;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/payment/notify/uHHRhONFrV0EMi3kK5ospM8iRu0J0qu4eP5s6wBxgp0', 'paypal_express'),
 	('Ui3W9tcZsf0YZIAPFGFI6nk8qvEIozg4Sj3IWtE6JgY', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/en_US/order/after-pay?payum_token=Ui3W9tcZsf0YZIAPFGFI6nk8qvEIozg4Sj3IWtE6JgY', 'stripe'),
 	('UvOQ1yZZv-3NSk3FzwNUXG1hFygV7xjLRThcPWICa2k', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://localhost/yezzstore/web/en_US/order/after-pay?payum_token=UvOQ1yZZv-3NSk3FzwNUXG1hFygV7xjLRThcPWICa2k', 'stripe'),
 	('VKJQ7MOAC8Sjo7QCDvG1dPWDLWXPFqU-k1lkC2JMa1w', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:8;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', 'http://yezzstore.test/en_US/order/after-pay?payum_token=7NCj82oa_acNJODAjUoInrpOR--vsjE_JG7FGpTyN0c', 'http://yezzstore.test/payment/capture/VKJQ7MOAC8Sjo7QCDvG1dPWDLWXPFqU-k1lkC2JMa1w', 'stripe'),
-	('vUq_XEzZs_YjbUfIvUh2TSeuCgREp63FY-AFaoBIub0', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:2;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/es_ES/order/after-pay?payum_token=vUq_XEzZs_YjbUfIvUh2TSeuCgREp63FY-AFaoBIub0', 'stripe');
+	('vUq_XEzZs_YjbUfIvUh2TSeuCgREp63FY-AFaoBIub0', 'C:25:"Payum\\Core\\Model\\Identity":61:{a:2:{i:0;i:2;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/es_ES/order/after-pay?payum_token=vUq_XEzZs_YjbUfIvUh2TSeuCgREp63FY-AFaoBIub0', 'stripe'),
+	('YYh5RdnBDimnm7TIvcQe5IuHtIbwIZHtD64HsUBntsg', 'C:25:"Payum\\Core\\Model\\Identity":62:{a:2:{i:0;i:21;i:1;s:35:"Sylius\\Component\\Core\\Model\\Payment";}}', NULL, 'http://yezzstore.test/payment/notify/YYh5RdnBDimnm7TIvcQe5IuHtIbwIZHtD64HsUBntsg', 'paypal_express');
 /*!40000 ALTER TABLE `sylius_payment_security_token` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product
@@ -870,15 +894,16 @@ CREATE TABLE IF NOT EXISTS `sylius_product` (
   UNIQUE KEY `UNIQ_677B9B7477153098` (`code`),
   KEY `IDX_677B9B74731E505` (`main_taxon_id`),
   CONSTRAINT `FK_677B9B74731E505` FOREIGN KEY (`main_taxon_id`) REFERENCES `sylius_taxon` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product: ~4 rows (aproximadamente)
 DELETE FROM `sylius_product`;
 /*!40000 ALTER TABLE `sylius_product` DISABLE KEYS */;
 INSERT INTO `sylius_product` (`id`, `main_taxon_id`, `code`, `created_at`, `updated_at`, `enabled`, `variant_selection_method`, `average_rating`) VALUES
-	(64, 7, 'yezz-4e4', '2018-01-18 18:39:13', '2018-02-01 19:14:40', 1, 'choice', 4),
+	(64, 5, 'yezz-4e4', '2018-01-18 18:39:13', '2018-02-06 13:07:13', 1, 'choice', 4),
 	(65, 5, 'yezz-5-5m', '2018-01-22 15:48:41', '2018-01-22 15:50:28', 1, 'choice', 0),
-	(66, 5, 'yezz-5e4', '2018-02-02 19:30:52', '2018-02-02 19:32:48', 1, 'choice', 0);
+	(66, 5, 'yezz-5e4', '2018-02-02 19:30:52', '2018-02-02 19:32:48', 1, 'choice', 0),
+	(67, 5, 'yezz-5e-lte', '2018-02-06 13:13:50', '2018-02-06 14:12:20', 1, 'choice', 0);
 /*!40000 ALTER TABLE `sylius_product` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_association
@@ -897,11 +922,11 @@ CREATE TABLE IF NOT EXISTS `sylius_product_association` (
   CONSTRAINT `FK_48E9CDABB1E1C39` FOREIGN KEY (`association_type_id`) REFERENCES `sylius_product_association_type` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_association: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_association: ~3 rows (aproximadamente)
 DELETE FROM `sylius_product_association`;
 /*!40000 ALTER TABLE `sylius_product_association` DISABLE KEYS */;
 INSERT INTO `sylius_product_association` (`id`, `association_type_id`, `product_id`, `created_at`, `updated_at`) VALUES
-	(1, 1, 64, '2018-01-22 17:28:55', '2018-02-01 20:03:19'),
+	(1, 1, 64, '2018-01-22 17:28:55', '2018-02-06 13:07:13'),
 	(2, 1, 66, '2018-02-02 19:33:40', '2018-02-02 19:33:40');
 /*!40000 ALTER TABLE `sylius_product_association` ENABLE KEYS */;
 
@@ -917,11 +942,11 @@ CREATE TABLE IF NOT EXISTS `sylius_product_association_product` (
   CONSTRAINT `FK_A427B983EFB9C8A5` FOREIGN KEY (`association_id`) REFERENCES `sylius_product_association` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_association_product: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_association_product: ~3 rows (aproximadamente)
 DELETE FROM `sylius_product_association_product`;
 /*!40000 ALTER TABLE `sylius_product_association_product` DISABLE KEYS */;
 INSERT INTO `sylius_product_association_product` (`association_id`, `product_id`) VALUES
-	(1, 65),
+	(1, 66),
 	(2, 64);
 /*!40000 ALTER TABLE `sylius_product_association_product` ENABLE KEYS */;
 
@@ -936,7 +961,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_association_type` (
   UNIQUE KEY `UNIQ_CCB8914C77153098` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_association_type: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_association_type: ~0 rows (aproximadamente)
 DELETE FROM `sylius_product_association_type`;
 /*!40000 ALTER TABLE `sylius_product_association_type` DISABLE KEYS */;
 INSERT INTO `sylius_product_association_type` (`id`, `code`, `created_at`, `updated_at`) VALUES
@@ -956,7 +981,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_association_type_translation` (
   CONSTRAINT `FK_4F618E52C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product_association_type` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_association_type_translation: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_association_type_translation: ~0 rows (aproximadamente)
 DELETE FROM `sylius_product_association_type_translation`;
 /*!40000 ALTER TABLE `sylius_product_association_type_translation` DISABLE KEYS */;
 INSERT INTO `sylius_product_association_type_translation` (`id`, `translatable_id`, `name`, `locale`) VALUES
@@ -979,11 +1004,11 @@ CREATE TABLE IF NOT EXISTS `sylius_product_attribute` (
   UNIQUE KEY `UNIQ_BFAF484A77153098` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_attribute: ~5 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_attribute: ~4 rows (aproximadamente)
 DELETE FROM `sylius_product_attribute`;
 /*!40000 ALTER TABLE `sylius_product_attribute` DISABLE KEYS */;
 INSERT INTO `sylius_product_attribute` (`id`, `code`, `type`, `storage_type`, `configuration`, `created_at`, `updated_at`, `position`) VALUES
-	(11, 'color', 'select', 'json', 'a:4:{s:7:"choices";a:6:{s:36:"740eaa0c-fc54-11e7-8ad4-1078d2435567";a:2:{s:5:"en_US";s:5:"Black";s:5:"es_ES";s:5:"Negro";}s:36:"13c01b46-fc5d-11e7-b21b-1078d2435567";a:2:{s:5:"en_US";s:4:"Pink";s:5:"es_ES";s:6:"Rosado";}s:36:"431da516-fc80-11e7-9573-1078d2435567";a:2:{s:5:"en_US";s:5:"White";s:5:"es_ES";s:6:"Blanco";}s:36:"432011ca-fc80-11e7-9d6b-1078d2435567";a:2:{s:5:"en_US";s:4:"Blue";s:5:"es_ES";s:4:"Azul";}s:36:"43201b84-fc80-11e7-94d2-1078d2435567";a:2:{s:5:"en_US";s:6:"Silver";s:5:"es_ES";s:8:"Plateado";}s:36:"432024a8-fc80-11e7-a0f1-1078d2435567";a:2:{s:5:"en_US";s:9:"Gun Metal";s:5:"es_ES";s:9:"Gun Metal";}}s:8:"multiple";b:1;s:3:"min";N;s:3:"max";N;}', '2018-01-18 13:35:30', '2018-01-18 18:49:33', 1),
+	(11, 'color', 'select', 'json', 'a:4:{s:7:"choices";a:7:{s:36:"740eaa0c-fc54-11e7-8ad4-1078d2435567";a:2:{s:5:"en_US";s:5:"Black";s:5:"es_ES";s:5:"Negro";}s:36:"13c01b46-fc5d-11e7-b21b-1078d2435567";a:2:{s:5:"en_US";s:4:"Pink";s:5:"es_ES";s:6:"Rosado";}s:36:"431da516-fc80-11e7-9573-1078d2435567";a:2:{s:5:"en_US";s:5:"White";s:5:"es_ES";s:6:"Blanco";}s:36:"432011ca-fc80-11e7-9d6b-1078d2435567";a:2:{s:5:"en_US";s:4:"Blue";s:5:"es_ES";s:4:"Azul";}s:36:"43201b84-fc80-11e7-94d2-1078d2435567";a:2:{s:5:"en_US";s:6:"Silver";s:5:"es_ES";s:8:"Plateado";}s:36:"432024a8-fc80-11e7-a0f1-1078d2435567";a:2:{s:5:"en_US";s:9:"Gun Metal";s:5:"es_ES";s:9:"Gun Metal";}s:36:"510abbaa-0b3f-11e8-962d-1078d2435567";a:2:{s:5:"en_US";s:4:"Gray";s:5:"es_ES";s:4:"Gris";}}s:8:"multiple";b:1;s:3:"min";N;s:3:"max";N;}', '2018-01-18 13:35:30', '2018-02-06 13:12:08', 1),
 	(12, 'chipset', 'text', 'text', 'a:2:{s:3:"min";N;s:3:"max";N;}', '2018-01-18 19:30:37', '2018-01-18 19:36:07', 0),
 	(13, 'front-camera', 'select', 'json', 'a:4:{s:7:"choices";a:2:{s:36:"8262e7d0-fc86-11e7-985d-1078d2435567";a:2:{s:5:"en_US";s:3:"2MP";s:5:"es_ES";s:3:"2MP";}s:36:"82630d14-fc86-11e7-88d5-1078d2435567";a:2:{s:5:"en_US";s:3:"5MP";s:5:"es_ES";s:3:"5MP";}}s:8:"multiple";b:0;s:3:"min";N;s:3:"max";N;}', '2018-01-18 19:33:49', '2018-01-18 19:34:03', 2),
 	(14, 'rear-camera', 'select', 'json', 'a:4:{s:7:"choices";a:4:{s:36:"5eae675a-fc87-11e7-aded-1078d2435567";a:2:{s:5:"en_US";s:3:"VGA";s:5:"es_ES";s:3:"VGA";}s:36:"5eae7d58-fc87-11e7-a599-1078d2435567";a:2:{s:5:"en_US";s:3:"5MP";s:5:"es_ES";s:3:"5MP";}s:36:"5eae8262-fc87-11e7-b4fb-1078d2435567";a:2:{s:5:"en_US";s:3:"8MP";s:5:"es_ES";s:3:"8MP";}s:36:"5eae8776-fc87-11e7-b13f-1078d2435567";a:2:{s:5:"en_US";s:4:"13MP";s:5:"es_ES";s:4:"13MP";}}s:8:"multiple";b:0;s:3:"min";N;s:3:"max";N;}', '2018-01-18 19:39:59', '2018-01-18 19:40:23', 3),
@@ -1003,7 +1028,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_attribute_translation` (
   CONSTRAINT `FK_93850EBA2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product_attribute` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_attribute_translation: ~10 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_attribute_translation: ~8 rows (aproximadamente)
 DELETE FROM `sylius_product_attribute_translation`;
 /*!40000 ALTER TABLE `sylius_product_attribute_translation` DISABLE KEYS */;
 INSERT INTO `sylius_product_attribute_translation` (`id`, `translatable_id`, `name`, `locale`) VALUES
@@ -1038,9 +1063,9 @@ CREATE TABLE IF NOT EXISTS `sylius_product_attribute_value` (
   KEY `IDX_8A053E54B6E62EFA` (`attribute_id`),
   CONSTRAINT `FK_8A053E544584665A` FOREIGN KEY (`product_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE,
   CONSTRAINT `FK_8A053E54B6E62EFA` FOREIGN KEY (`attribute_id`) REFERENCES `sylius_product_attribute` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=190 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=199 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_attribute_value: ~26 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_attribute_value: ~31 rows (aproximadamente)
 DELETE FROM `sylius_product_attribute_value`;
 /*!40000 ALTER TABLE `sylius_product_attribute_value` DISABLE KEYS */;
 INSERT INTO `sylius_product_attribute_value` (`id`, `product_id`, `attribute_id`, `text_value`, `boolean_value`, `integer_value`, `float_value`, `datetime_value`, `date_value`, `json_value`, `locale_code`) VALUES
@@ -1069,7 +1094,16 @@ INSERT INTO `sylius_product_attribute_value` (`id`, `product_id`, `attribute_id`
 	(186, 66, 11, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES'),
 	(187, 66, 13, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES'),
 	(188, 66, 14, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES'),
-	(189, 66, 15, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES');
+	(189, 66, 15, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES'),
+	(190, 67, 12, 'MediaTek MT6735M', NULL, NULL, NULL, NULL, NULL, NULL, 'en_US'),
+	(191, 67, 13, NULL, NULL, NULL, NULL, NULL, NULL, '["82630d14-fc86-11e7-88d5-1078d2435567"]', 'en_US'),
+	(192, 67, 14, NULL, NULL, NULL, NULL, NULL, NULL, '["5eae8262-fc87-11e7-b4fb-1078d2435567"]', 'en_US'),
+	(193, 67, 15, NULL, NULL, NULL, NULL, NULL, NULL, '["da87549e-fd46-11e7-8a0c-1078d2435567","da858074-fd46-11e7-81ab-1078d2435567"]', 'en_US'),
+	(194, 67, 11, NULL, NULL, NULL, NULL, NULL, NULL, '["740eaa0c-fc54-11e7-8ad4-1078d2435567","510abbaa-0b3f-11e8-962d-1078d2435567"]', 'en_US'),
+	(195, 67, 13, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES'),
+	(196, 67, 14, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES'),
+	(197, 67, 15, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES'),
+	(198, 67, 11, NULL, NULL, NULL, NULL, NULL, NULL, '[]', 'es_ES');
 /*!40000 ALTER TABLE `sylius_product_attribute_value` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_channels
@@ -1084,13 +1118,14 @@ CREATE TABLE IF NOT EXISTS `sylius_product_channels` (
   CONSTRAINT `FK_F9EF269B72F5A1AA` FOREIGN KEY (`channel_id`) REFERENCES `sylius_channel` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_channels: ~3 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_channels: ~4 rows (aproximadamente)
 DELETE FROM `sylius_product_channels`;
 /*!40000 ALTER TABLE `sylius_product_channels` DISABLE KEYS */;
 INSERT INTO `sylius_product_channels` (`product_id`, `channel_id`) VALUES
 	(64, 1),
 	(65, 1),
-	(66, 1);
+	(66, 1),
+	(67, 1);
 /*!40000 ALTER TABLE `sylius_product_channels` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_image
@@ -1103,9 +1138,9 @@ CREATE TABLE IF NOT EXISTS `sylius_product_image` (
   PRIMARY KEY (`id`),
   KEY `IDX_88C64B2D7E3C61F9` (`owner_id`),
   CONSTRAINT `FK_88C64B2D7E3C61F9` FOREIGN KEY (`owner_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=160 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=169 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_image: ~13 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_image: ~19 rows (aproximadamente)
 DELETE FROM `sylius_product_image`;
 /*!40000 ALTER TABLE `sylius_product_image` DISABLE KEYS */;
 INSERT INTO `sylius_product_image` (`id`, `owner_id`, `type`, `path`) VALUES
@@ -1121,7 +1156,15 @@ INSERT INTO `sylius_product_image` (`id`, `owner_id`, `type`, `path`) VALUES
 	(156, 64, 'yezz4e4-white-back', '7e/bb/23fdb926cdd48cb8c851022502c3.png'),
 	(157, 65, 'yezz5-5m-black-front', '59/8a/7421d437f8d3bd74b342dbe55b20.png'),
 	(158, 66, 'yezz5e4-black-front', '0b/e5/7ae52905bf6c0c75a5216735482f.png'),
-	(159, 66, 'yezz5e4-black-back', '5c/fa/cd3edb85169c151500832a26255c.png');
+	(159, 66, 'yezz5e4-black-back', '5c/fa/cd3edb85169c151500832a26255c.png'),
+	(161, 67, 'yezz5e-lte-black-front', 'fb/91/6316ad97d6ec39a56cf780ac4bd7.png'),
+	(162, 67, 'yezz5e-lte-black-back', '58/88/26bff29897bbafce92ae44158fe0.png'),
+	(163, 67, 'yezz5e-lte-gray-front', '65/fa/6b9e55c84fb77086bbdad43f8aa1.png'),
+	(164, 67, 'yezz5e-lte-gray-back', '4c/9e/bc96f46b6e4bb184bdffce413c14.png'),
+	(165, 67, 'yezz5e-lte-black-full', '5b/69/d4b145febce7d58f4fff08369de6.jpeg'),
+	(166, 67, 'yezz5e-lte-gray-full', '93/8b/37e333836914937294d87eba06b4.jpeg'),
+	(167, 67, 'yezz5e-lte-protector', '53/5d/acb27ddcb6ae80d962f5b26076ac.jpeg'),
+	(168, 67, 'yezz5e-lte-box', 'c0/90/bd0fec1516691feb9d5ddbd10a13.png');
 /*!40000 ALTER TABLE `sylius_product_image` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_image_product_variants
@@ -1136,7 +1179,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_image_product_variants` (
   CONSTRAINT `FK_8FFDAE8D3DA5256D` FOREIGN KEY (`image_id`) REFERENCES `sylius_product_image` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_image_product_variants: ~10 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_image_product_variants: ~19 rows (aproximadamente)
 DELETE FROM `sylius_product_image_product_variants`;
 /*!40000 ALTER TABLE `sylius_product_image_product_variants` DISABLE KEYS */;
 INSERT INTO `sylius_product_image_product_variants` (`image_id`, `variant_id`) VALUES
@@ -1149,7 +1192,17 @@ INSERT INTO `sylius_product_image_product_variants` (`image_id`, `variant_id`) V
 	(153, 335),
 	(154, 335),
 	(155, 334),
-	(156, 334);
+	(156, 334),
+	(161, 345),
+	(162, 345),
+	(163, 346),
+	(164, 346),
+	(165, 345),
+	(166, 345),
+	(167, 345),
+	(167, 346),
+	(168, 345),
+	(168, 346);
 /*!40000 ALTER TABLE `sylius_product_image_product_variants` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_option
@@ -1183,12 +1236,13 @@ CREATE TABLE IF NOT EXISTS `sylius_product_options` (
   CONSTRAINT `FK_2B5FF009A7C41D6F` FOREIGN KEY (`option_id`) REFERENCES `sylius_product_option` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_options: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_options: ~3 rows (aproximadamente)
 DELETE FROM `sylius_product_options`;
 /*!40000 ALTER TABLE `sylius_product_options` DISABLE KEYS */;
 INSERT INTO `sylius_product_options` (`product_id`, `option_id`) VALUES
 	(64, 1),
-	(66, 1);
+	(66, 1),
+	(67, 1);
 /*!40000 ALTER TABLE `sylius_product_options` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_option_translation
@@ -1204,7 +1258,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_option_translation` (
   CONSTRAINT `FK_CBA491AD2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product_option` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_option_translation: ~2 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_option_translation: ~3 rows (aproximadamente)
 DELETE FROM `sylius_product_option_translation`;
 /*!40000 ALTER TABLE `sylius_product_option_translation` DISABLE KEYS */;
 INSERT INTO `sylius_product_option_translation` (`id`, `translatable_id`, `name`, `locale`) VALUES
@@ -1292,7 +1346,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_review` (
   CONSTRAINT `FK_C7056A99F675F31B` FOREIGN KEY (`author_id`) REFERENCES `sylius_customer` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=43 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_review: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_review: ~0 rows (aproximadamente)
 DELETE FROM `sylius_product_review`;
 /*!40000 ALTER TABLE `sylius_product_review` DISABLE KEYS */;
 INSERT INTO `sylius_product_review` (`id`, `product_id`, `author_id`, `title`, `rating`, `comment`, `status`, `created_at`, `updated_at`) VALUES
@@ -1312,7 +1366,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_taxon` (
   KEY `IDX_169C6CD9DE13F470` (`taxon_id`),
   CONSTRAINT `FK_169C6CD94584665A` FOREIGN KEY (`product_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE,
   CONSTRAINT `FK_169C6CD9DE13F470` FOREIGN KEY (`taxon_id`) REFERENCES `sylius_taxon` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Volcando datos para la tabla yezzstore.sylius_product_taxon: ~9 rows (aproximadamente)
 DELETE FROM `sylius_product_taxon`;
@@ -1326,7 +1380,9 @@ INSERT INTO `sylius_product_taxon` (`id`, `product_id`, `taxon_id`, `position`) 
 	(90, 65, 7, 1),
 	(91, 66, 1, 2),
 	(92, 66, 5, 2),
-	(93, 66, 7, 2);
+	(93, 66, 7, 2),
+	(94, 67, 5, 3),
+	(95, 67, 7, 3);
 /*!40000 ALTER TABLE `sylius_product_taxon` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_translation
@@ -1346,18 +1402,20 @@ CREATE TABLE IF NOT EXISTS `sylius_product_translation` (
   UNIQUE KEY `UNIQ_105A9084180C698989D9B62` (`locale`,`slug`),
   KEY `IDX_105A9082C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_105A9082C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=73 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_translation: ~6 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_translation: ~8 rows (aproximadamente)
 DELETE FROM `sylius_product_translation`;
 /*!40000 ALTER TABLE `sylius_product_translation` DISABLE KEYS */;
 INSERT INTO `sylius_product_translation` (`id`, `translatable_id`, `name`, `slug`, `description`, `meta_keywords`, `meta_description`, `short_description`, `locale`) VALUES
-	(67, 64, 'Yezz 4E4', 'yezz-4e4', 'Yezz 4E4', NULL, NULL, 'Yezz 4E4 Description Short', 'en_US'),
+	(67, 64, 'Yezz 4E4', 'yezz-4e4', 'Discover the power of the Quad-Core 1.2 GHz ARM Cortex-A7 processor that offers high performance with low energy consumption for most apps. With Android OS v6.0 Marshmallow you are able to manage and monitor the 512MB of RAM memory and 4GB of ROM memory expandable up to 64GB of your YEZZ 4E. Enjoy sharp graphics and images with the incredible 4-inch FWVGA screen with 480x854 resolution. Capture every moment with the YEZZ 4E’s 5MP and 2MP cameras. Manage the 1400 mAh battery so it can work more efficiently and effortless. The YEZZ 4E will make you stand out with elegant and stylish metallic colors: pink, white, blue and black.', NULL, NULL, '- Processor: Quad-Core 1.2 GHz ARM Cortex-A7\r\n- Cameras: 5MP (Primary) 2MP (Front camera)\r\n- Memory: 512MB (RAM) 4GB (ROM) expandable up to 64GB\r\n- Loaded with the Android OS v6.0 Marshmallow + 1400 mAh\r\n- Networks: 2G (850/900/1800/1900) 3G (850/1900) – Factory Unlocked Dual SIM smartphone. Compatible with: AT&T, T-Mobile, Cricket, MetroPCS, Straight Talk and other GSM operators.', 'en_US'),
 	(68, 64, 'Yezz 4E4', 'yezz-4e4', 'Yezz 4E4', NULL, NULL, 'Yezz 4E4 Descripcion Corta', 'es_ES'),
-	(69, 65, 'Yezz 5.5M', 'yezz-5-5m', 'YEZZ 5.5M - Description', NULL, NULL, 'YEZZ 5.5M - Short Description', 'en_US'),
+	(69, 65, 'Yezz 5.5M', 'yezz-5-5m', 'The YEZZ 5.5M comes with a Quad-core 1.3GHz Cortez A7 processor that offers high performance for processing large blocks of data simultaneously. The 1GB (RAM) and 8GB (ROM) expandable up to 64GB memories will give you the storage you are looking for. The Android OS v7.0 Nougat comes installed with new features such as data saving and shared screen for apps. The best features of the YEZZ 5.5M are its cameras and display. With 13MP and 5MP cameras, your best moments will be registered for ever. The 5.5 inch display, with HD IPS resolution and 2.5D curved bezel glass of the YEZZ 5.5M offers extraordinary possibilities in terms of multimedia content visualization. The powerful 3000 mAh battery will be your best ally. Comes in black to add elegance to your style.', NULL, NULL, '•	Cameras: 13MP (Primary) 5MP (Front camera).\r\n•	5.5 inch display, with HD IPS resolution and 2.5D curved bezel glass.\r\n•	Memory: 1GB (RAM) + 8GB (ROM) expandable up to 64GB\r\n•	Android OS v7.0 Nougat + 3000 mAh battery.\r\n•	Networks: 2G (850/900/1800/1900) 3G (850/1900) – Factory Unlocked Dual SIM smartphone. Compatible with: AT&T, T-Mobile, Cricket, MetroPCS, Straight Talk and other GSM operators.', 'en_US'),
 	(70, 65, 'Yezz 5.5M', 'yezz-5-5m', 'YEZZ 5.5M - Descripcion', NULL, NULL, 'YEZZ 5.5M - Descripcion Corta', 'es_ES'),
 	(71, 66, 'Yezz 5E4', 'yezz-5e4', 'Yezz 5E4 Description', NULL, NULL, 'Yezz 5E4 Short Description', 'en_US'),
-	(72, 66, 'Yezz 5E4', 'yezz-5e4', 'Yezz 5E4 Descripción', NULL, NULL, 'Yezz 5E4 Descripción corta', 'es_ES');
+	(72, 66, 'Yezz 5E4', 'yezz-5e4', 'Yezz 5E4 Descripción', NULL, NULL, 'Yezz 5E4 Descripción corta', 'es_ES'),
+	(73, 67, 'Yezz 5E LTE', 'yezz-5e-lte', 'With the 1.0 GHz Quad-Core processor you get an outstanding performance in terms of battery efficiency, reducing power consumption while still maintaining seamless visualization of multimedia content. Nothing will stop you with the 1GB (RAM) and 8GB (ROM) memory expandable up to 64GB that the YEZZ 5E LTE offers you. The Android OS v6.0 Marshmallow will make your life easier with newly added features. Immortalize your experiences with the rear 8MP camera and front 5MP camera of the YEZZ 5E LTE. Share and display your favorite multimedia content on the 5-inch FWVGA screen. Enjoy without worries with the 2000 mAh battery. Available in black and silver for eccentric personalities.', NULL, NULL, '- Connection speed 4G LTE \r\n- Memory: 1GB (RAM) and 8GB (ROM) memory expandable up to 64GB.\r\n- Cameras: 8MP (Primary) 5MP (Front camera).\r\n- Loaded with the Android OS v6.0 Marshmallow + 2000 mAh battery.\r\n- Networks: 3G (850/1900) 4G (B4/B7/B17) – Factory Unlocked Dual SIM smartphone. Compatible Carriers: AT&T, T-Mobile, Cricket, MetroPCS, Straight Talk and other GSM carriers. NOT Compatible: this phone will NOT work with CDMA Carriers like Verizon, Sprint, Virgin or Boost Mobile.', 'en_US'),
+	(74, 67, 'Yezz 5E LTE', 'yezz-5e-lte', 'Yezz 5E LTE Descripción', NULL, NULL, 'Yezz 5E LTE Descripción corta', 'es_ES');
 /*!40000 ALTER TABLE `sylius_product_translation` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_variant
@@ -1388,7 +1446,7 @@ CREATE TABLE IF NOT EXISTS `sylius_product_variant` (
   CONSTRAINT `FK_A29B5234584665A` FOREIGN KEY (`product_id`) REFERENCES `sylius_product` (`id`) ON DELETE CASCADE,
   CONSTRAINT `FK_A29B5239DF894ED` FOREIGN KEY (`tax_category_id`) REFERENCES `sylius_tax_category` (`id`) ON DELETE SET NULL,
   CONSTRAINT `FK_A29B5239E2D1A41` FOREIGN KEY (`shipping_category_id`) REFERENCES `sylius_shipping_category` (`id`) ON DELETE SET NULL
-) ENGINE=InnoDB AUTO_INCREMENT=345 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=347 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- Volcando datos para la tabla yezzstore.sylius_product_variant: ~12 rows (aproximadamente)
 DELETE FROM `sylius_product_variant`;
@@ -1400,12 +1458,14 @@ INSERT INTO `sylius_product_variant` (`id`, `product_id`, `tax_category_id`, `sh
 	(336, 64, NULL, NULL, 'yezz-4e4-blue', '2018-01-18 18:44:53', '2018-01-18 21:25:42', 0, 0, 1, NULL, NULL, NULL, NULL, 3, 1, 3),
 	(337, 65, NULL, NULL, 'yezz-5-5m', '2018-01-22 15:48:41', '2018-01-25 17:19:50', 0, 3498, 1, NULL, NULL, NULL, NULL, 0, 0, 5),
 	(338, 64, NULL, NULL, 'yezz-4e4-gray', '2018-02-01 19:40:33', '2018-02-01 19:41:00', 0, 1000, 1, NULL, NULL, NULL, NULL, 4, 1, 2),
-	(339, 66, NULL, NULL, 'yezz-5e4-black', '2018-02-02 19:38:31', '2018-02-02 19:39:02', 0, 500, 1, NULL, NULL, NULL, NULL, 0, 1, 2),
+	(339, 66, NULL, NULL, 'yezz-5e4-black', '2018-02-02 19:38:31', '2018-02-06 13:43:51', 0, 500, 1, NULL, NULL, NULL, NULL, 0, 0, 3),
 	(340, 66, NULL, NULL, 'yezz-5e4-white', '2018-02-02 19:38:31', '2018-02-02 19:39:16', 0, 500, 1, NULL, NULL, NULL, NULL, 1, 1, 2),
 	(341, 66, NULL, NULL, 'yezz-5e4-gray', '2018-02-02 19:38:31', '2018-02-02 19:39:31', 0, 500, 1, NULL, NULL, NULL, NULL, 2, 1, 2),
 	(342, 66, NULL, NULL, 'yezz-5e4-silver', '2018-02-02 19:38:31', '2018-02-02 19:39:44', 0, 500, 1, NULL, NULL, NULL, NULL, 3, 1, 2),
 	(343, 66, NULL, NULL, 'yezz-5e4-gun-metal', '2018-02-02 19:38:31', '2018-02-02 19:39:55', 0, 500, 1, NULL, NULL, NULL, NULL, 4, 1, 2),
-	(344, 66, NULL, NULL, 'yezz-5e4-pink', '2018-02-02 19:38:31', '2018-02-02 19:40:06', 0, 500, 1, NULL, NULL, NULL, NULL, 5, 1, 2);
+	(344, 66, NULL, NULL, 'yezz-5e4-pink', '2018-02-02 19:38:31', '2018-02-02 19:40:06', 0, 500, 1, NULL, NULL, NULL, NULL, 5, 1, 2),
+	(345, 67, NULL, NULL, 'yezz-5e-lte-black', '2018-02-06 13:16:45', '2018-02-06 13:51:33', 0, 999, 1, NULL, NULL, NULL, NULL, 0, 0, 5),
+	(346, 67, NULL, NULL, 'yezz-5e-lte-gray', '2018-02-06 13:16:45', '2018-02-06 15:12:39', 0, 999, 1, NULL, NULL, NULL, NULL, 1, 0, 5);
 /*!40000 ALTER TABLE `sylius_product_variant` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_variant_option_value
@@ -1434,7 +1494,9 @@ INSERT INTO `sylius_product_variant_option_value` (`variant_id`, `option_value_i
 	(341, 3),
 	(342, 15),
 	(343, 16),
-	(344, 17);
+	(344, 17),
+	(345, 1),
+	(346, 3);
 /*!40000 ALTER TABLE `sylius_product_variant_option_value` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_product_variant_translation
@@ -1448,9 +1510,9 @@ CREATE TABLE IF NOT EXISTS `sylius_product_variant_translation` (
   UNIQUE KEY `sylius_product_variant_translation_uniq_trans` (`translatable_id`,`locale`),
   KEY `IDX_8DC18EDC2C2AC5D3` (`translatable_id`),
   CONSTRAINT `FK_8DC18EDC2C2AC5D3` FOREIGN KEY (`translatable_id`) REFERENCES `sylius_product_variant` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=351 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=355 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_product_variant_translation: ~17 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_product_variant_translation: ~21 rows (aproximadamente)
 DELETE FROM `sylius_product_variant_translation`;
 /*!40000 ALTER TABLE `sylius_product_variant_translation` DISABLE KEYS */;
 INSERT INTO `sylius_product_variant_translation` (`id`, `translatable_id`, `name`, `locale`) VALUES
@@ -1470,7 +1532,11 @@ INSERT INTO `sylius_product_variant_translation` (`id`, `translatable_id`, `name
 	(347, 341, 'Yezz 5E4', 'en_US'),
 	(348, 342, 'Yezz 5E4', 'en_US'),
 	(349, 343, 'Yezz 5E4', 'en_US'),
-	(350, 344, 'Yezz 5E4', 'en_US');
+	(350, 344, 'Yezz 5E4', 'en_US'),
+	(351, 345, 'Yezz 5E LTE', 'en_US'),
+	(352, 346, 'Yezz 5E LTE', 'en_US'),
+	(353, 346, 'Yezz 5E LTE', 'es_ES'),
+	(354, 345, 'Yezz 5E LTE', 'es_ES');
 /*!40000 ALTER TABLE `sylius_product_variant_translation` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_promotion
@@ -1512,7 +1578,7 @@ CREATE TABLE IF NOT EXISTS `sylius_promotion_action` (
   CONSTRAINT `FK_933D0915139DF194` FOREIGN KEY (`promotion_id`) REFERENCES `sylius_promotion` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_promotion_action: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_promotion_action: ~2 rows (aproximadamente)
 DELETE FROM `sylius_promotion_action`;
 /*!40000 ALTER TABLE `sylius_promotion_action` DISABLE KEYS */;
 INSERT INTO `sylius_promotion_action` (`id`, `promotion_id`, `type`, `configuration`) VALUES
@@ -1531,7 +1597,7 @@ CREATE TABLE IF NOT EXISTS `sylius_promotion_channels` (
   CONSTRAINT `FK_1A044F6472F5A1AA` FOREIGN KEY (`channel_id`) REFERENCES `sylius_channel` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_promotion_channels: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_promotion_channels: ~2 rows (aproximadamente)
 DELETE FROM `sylius_promotion_channels`;
 /*!40000 ALTER TABLE `sylius_promotion_channels` DISABLE KEYS */;
 INSERT INTO `sylius_promotion_channels` (`promotion_id`, `channel_id`) VALUES
@@ -1583,7 +1649,7 @@ CREATE TABLE IF NOT EXISTS `sylius_promotion_order` (
   CONSTRAINT `FK_BF9CF6FB8D9F6D38` FOREIGN KEY (`order_id`) REFERENCES `sylius_order` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_promotion_order: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_promotion_order: ~1 rows (aproximadamente)
 DELETE FROM `sylius_promotion_order`;
 /*!40000 ALTER TABLE `sylius_promotion_order` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sylius_promotion_order` ENABLE KEYS */;
@@ -1600,7 +1666,7 @@ CREATE TABLE IF NOT EXISTS `sylius_promotion_rule` (
   CONSTRAINT `FK_2C188EA8139DF194` FOREIGN KEY (`promotion_id`) REFERENCES `sylius_promotion` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_promotion_rule: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_promotion_rule: ~2 rows (aproximadamente)
 DELETE FROM `sylius_promotion_rule`;
 /*!40000 ALTER TABLE `sylius_promotion_rule` DISABLE KEYS */;
 INSERT INTO `sylius_promotion_rule` (`id`, `promotion_id`, `type`, `configuration`) VALUES
@@ -1693,7 +1759,7 @@ CREATE TABLE IF NOT EXISTS `sylius_shipping_method` (
   CONSTRAINT `FK_5FB0EE119F2C3FAB` FOREIGN KEY (`zone_id`) REFERENCES `sylius_zone` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_shipping_method: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_shipping_method: ~2 rows (aproximadamente)
 DELETE FROM `sylius_shipping_method`;
 /*!40000 ALTER TABLE `sylius_shipping_method` DISABLE KEYS */;
 INSERT INTO `sylius_shipping_method` (`id`, `category_id`, `zone_id`, `tax_category_id`, `code`, `configuration`, `category_requirement`, `calculator`, `is_enabled`, `position`, `created_at`, `updated_at`, `archived_at`) VALUES
@@ -1715,7 +1781,7 @@ CREATE TABLE IF NOT EXISTS `sylius_shipping_method_channels` (
   CONSTRAINT `FK_2D98333572F5A1AA` FOREIGN KEY (`channel_id`) REFERENCES `sylius_channel` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_shipping_method_channels: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_shipping_method_channels: ~2 rows (aproximadamente)
 DELETE FROM `sylius_shipping_method_channels`;
 /*!40000 ALTER TABLE `sylius_shipping_method_channels` DISABLE KEYS */;
 INSERT INTO `sylius_shipping_method_channels` (`shipping_method_id`, `channel_id`) VALUES
@@ -1783,7 +1849,7 @@ DELETE FROM `sylius_shop_user`;
 /*!40000 ALTER TABLE `sylius_shop_user` DISABLE KEYS */;
 INSERT INTO `sylius_shop_user` (`id`, `customer_id`, `username`, `username_canonical`, `enabled`, `salt`, `password`, `last_login`, `password_reset_token`, `password_requested_at`, `email_verification_token`, `verified_at`, `locked`, `expires_at`, `credentials_expire_at`, `roles`, `email`, `email_canonical`, `created_at`, `updated_at`) VALUES
 	(1, 1, 'shop@example.com', 'shop@example.com', 1, 'modfilvz90gkogccswc00w4ckscw0s4', 'RhZ8BvZccgWSDlbQx1R2IWt9O1/6CNwMu3A5mpCoH+KtgYQr5G3gP8zJxKbiC0kSyinYOEfwJhZbdbGhIEM6lA==', NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 'a:1:{i:0;s:9:"ROLE_USER";}', NULL, NULL, '2018-01-16 18:26:05', '2018-01-16 18:26:05'),
-	(22, 22, 'juliohernandezs@gmail.com', 'juliohernandezs@gmail.com', 1, 'ql89y2h6eqs08w4gwckss8800s0cw0w', 'ERD3jsvzvWCy/SQ1eJscysfqEOdemkBlKEJ8fOvJRjzwegXCM924oFQrvTjepyc3Llz92ZETKKGDu1l2YlckcQ==', '2018-01-29 16:30:49', NULL, NULL, NULL, '2018-01-31 13:58:21', 0, NULL, NULL, 'a:1:{i:0;s:9:"ROLE_USER";}', NULL, NULL, '2018-01-16 18:41:33', '2018-01-31 13:58:21');
+	(22, 22, 'juliohernandezs@gmail.com', 'juliohernandezs@gmail.com', 1, 'ql89y2h6eqs08w4gwckss8800s0cw0w', 'ERD3jsvzvWCy/SQ1eJscysfqEOdemkBlKEJ8fOvJRjzwegXCM924oFQrvTjepyc3Llz92ZETKKGDu1l2YlckcQ==', '2018-02-06 14:43:12', NULL, NULL, NULL, '2018-01-31 13:58:21', 0, NULL, NULL, 'a:1:{i:0;s:9:"ROLE_USER";}', NULL, NULL, '2018-01-16 18:41:33', '2018-02-06 14:43:12');
 /*!40000 ALTER TABLE `sylius_shop_user` ENABLE KEYS */;
 
 -- Volcando estructura para tabla yezzstore.sylius_taxon
@@ -1807,7 +1873,7 @@ CREATE TABLE IF NOT EXISTS `sylius_taxon` (
   CONSTRAINT `FK_CFD811CAA977936C` FOREIGN KEY (`tree_root`) REFERENCES `sylius_taxon` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_taxon: ~4 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_taxon: ~5 rows (aproximadamente)
 DELETE FROM `sylius_taxon`;
 /*!40000 ALTER TABLE `sylius_taxon` DISABLE KEYS */;
 INSERT INTO `sylius_taxon` (`id`, `tree_root`, `parent_id`, `code`, `tree_left`, `tree_right`, `tree_level`, `position`, `created_at`, `updated_at`) VALUES
@@ -1905,7 +1971,7 @@ CREATE TABLE IF NOT EXISTS `sylius_tax_rate` (
   CONSTRAINT `FK_3CD86B2E9F2C3FAB` FOREIGN KEY (`zone_id`) REFERENCES `sylius_zone` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_tax_rate: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_tax_rate: ~1 rows (aproximadamente)
 DELETE FROM `sylius_tax_rate`;
 /*!40000 ALTER TABLE `sylius_tax_rate` DISABLE KEYS */;
 /*!40000 ALTER TABLE `sylius_tax_rate` ENABLE KEYS */;
@@ -1942,7 +2008,7 @@ CREATE TABLE IF NOT EXISTS `sylius_zone` (
   UNIQUE KEY `UNIQ_7BE2258E77153098` (`code`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_zone: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_zone: ~0 rows (aproximadamente)
 DELETE FROM `sylius_zone`;
 /*!40000 ALTER TABLE `sylius_zone` DISABLE KEYS */;
 INSERT INTO `sylius_zone` (`id`, `code`, `name`, `type`, `scope`) VALUES
@@ -1961,7 +2027,7 @@ CREATE TABLE IF NOT EXISTS `sylius_zone_member` (
   CONSTRAINT `FK_E8B5ABF34B0E929B` FOREIGN KEY (`belongs_to`) REFERENCES `sylius_zone` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Volcando datos para la tabla yezzstore.sylius_zone_member: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla yezzstore.sylius_zone_member: ~0 rows (aproximadamente)
 DELETE FROM `sylius_zone_member`;
 /*!40000 ALTER TABLE `sylius_zone_member` DISABLE KEYS */;
 INSERT INTO `sylius_zone_member` (`id`, `belongs_to`, `code`) VALUES
